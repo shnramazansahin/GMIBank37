@@ -1,1 +1,2 @@
-Feature: All tests
+ Feature: All tests
+   Welcome everyone

@@ -27,26 +27,27 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
     //to initialize the driver we create a static method
     public static WebDriver getDriver() {
         //create the driver if and only if it is null
-        if (driver == null) {
-            String browser = ConfigurationReader.getProperty("browser");
-            if ("chrome".equals(browser)) {
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-            } else if ("firefox".equals(browser)) {
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-            } else if ("ie".equals(browser)) {
-                WebDriverManager.iedriver().setup();
-                driver = new InternetExplorerDriver();
-            } else if ("safari".equals(browser)) {
-                WebDriverManager.getInstance(SafariDriver.class).setup();
-                driver = new SafariDriver();
-            } else if ("chrome-headless".equals(browser)) {
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+        if(driver==null) {
+            switch (ConfigurationReader.getProperty("browser")) {
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    break;
+                case "ie":
+                    WebDriverManager.iedriver().setup();
+                    driver = new InternetExplorerDriver();
+                    break;
+                case "chrome-headless":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    break;
             }
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         return driver;
     }

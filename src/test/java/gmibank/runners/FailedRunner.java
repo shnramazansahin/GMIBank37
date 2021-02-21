@@ -1,5 +1,4 @@
 package gmibank.runners;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -8,17 +7,15 @@ import org.junit.runner.RunWith;
         plugin = {
                 "html:target/default-cucumber-reports",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml",
-                "rerun:target/FailedReRun.txt"
+                "junit:target/xml-report/cucumber.xml"
         },
-        features = "src/test/resources/features",
+        features = "target/FailedReRun.txt",
         glue = "gmibank/stepdefinations",
-        tags = "@US6",
-        dryRun = false
+        dryRun = true
 
 
 
 )
-public class Runner {
 
+public class FailedRunner {
 }

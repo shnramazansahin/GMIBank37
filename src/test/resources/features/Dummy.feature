@@ -1,2 +1,4 @@
+@dum
  Feature: All tests
-   Welcome everyone
+  Scenario: s
+    Given asd

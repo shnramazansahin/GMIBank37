@@ -1,7 +1,5 @@
 package gmibank.utilities;
-
-
-import gmibank.pojos.Customer;
+import gmibank.pojos.pojos.Customer;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

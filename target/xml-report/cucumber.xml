@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="165.113369">
+    <testcase classname="Invalid credentials on the registration page" name="register with invalid credentials" time="88.73844">
+        <system-out><![CDATA[Given User is on the home page..............................................passed
+And User navigates to registration page.....................................passed
+Given user enters a  9 digit SSN "".........................................passed
+When user enters a name" "..................................................passed
+When user enter a lastname ""...............................................passed
+When user enter an address "" with zip......................................passed
+When user enter a 10 digits phone "" number.................................passed
+When user create a username "" without digits...............................passed
+When user enter a email "" address..........................................passed
+When user enter a valid password "".........................................passed
+When user reenter the ""....................................................passed
+When click on the register..................................................passed
+Then verify the invalid feedback............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Invalid credentials on the registration page" name="register with invalid credentials 2" time="25.295965">
+        <system-out><![CDATA[Given User is on the home page..............................................passed
+And User navigates to registration page.....................................passed
+Given user enters a  9 digit SSN "343-78-9345"..............................passed
+When user enters a name" Filiz".............................................passed
+When user enter a lastname ""...............................................passed
+When user enter an address "Turkey" with zip................................passed
+When user enter a 10 digits phone "123-385-2354" number.....................passed
+When user create a username "User" without digits...........................passed
+When user enter a email "usertestr@gmail.com" address.......................passed
+When user enter a valid password "Abcds!"...................................passed
+When user reenter the "Abcds!"..............................................passed
+When click on the register..................................................passed
+Then verify the invalid feedback............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Invalid credentials on the registration page" name="register with invalid credentials 3" time="21.026399">
+        <system-out><![CDATA[Given User is on the home page..............................................passed
+And User navigates to registration page.....................................passed
+Given user enters a  9 digit SSN "343-78-9345"..............................passed
+When user enters a name" Filiz".............................................passed
+When user enter a lastname ""...............................................passed
+When user enter an address "Turkey" with zip................................passed
+When user enter a 10 digits phone "123-385-2354" number.....................passed
+When user create a username "User" without digits...........................passed
+When user enter a email "usertestr@gmail.com" address.......................passed
+When user enter a valid password "".........................................passed
+When user reenter the "Abcds!"..............................................passed
+When click on the register..................................................passed
+Then verify the invalid feedback............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Invalid credentials on the registration page" name="register with invalid credentials 4" time="30.052565">
+        <failure message="java.lang.AssertionError&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#10;&#9;at gmibank.step_definitions.RegistrationStepDef.verify_the_invalid_feedback(RegistrationStepDef.java:108)&#10;&#9;at ✽.verify the invalid feedback(src/test/resources/features/RegistrationPageUS_2.feature:21)&#10;"><![CDATA[Given User is on the home page..............................................passed
+And User navigates to registration page.....................................passed
+Given user enters a  9 digit SSN "343-78-9345"..............................passed
+When user enters a name" Filiz".............................................passed
+When user enter a lastname "Abcde"..........................................passed
+When user enter an address "" with zip......................................passed
+When user enter a 10 digits phone "" number.................................passed
+When user create a username "User" without digits...........................passed
+When user enter a email "usertestr@gmail.com" address.......................passed
+When user enter a valid password "Abcds!"...................................passed
+When user reenter the "Abcds!"..............................................passed
+When click on the register..................................................passed
+Then verify the invalid feedback............................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at gmibank.step_definitions.RegistrationStepDef.verify_the_invalid_feedback(RegistrationStepDef.java:108)
+	at ✽.verify the invalid feedback(src/test/resources/features/RegistrationPageUS_2.feature:21)
+]]></failure>
+    </testcase>
+</testsuite>

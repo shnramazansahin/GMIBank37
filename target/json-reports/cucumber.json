@@ -1,0 +1,1091 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 17876595136,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1139967525,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User navigates to registration page",
+            "match": {
+              "location": "RegistrationStepDef.user_navigates_to_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 57243139159,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "register with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials-on-the-registration-page;register-with-invalid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 293450770,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1101314265,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a  9 digit SSN \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 15
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_digit_SSN(Integer,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2100109617,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters a name\" \"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" \"",
+                  "offset": 18
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 105546417,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enter a lastname \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50729557,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter an address \"\" with zip",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_an_address_with_zip(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56241673,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enter a 10 digits phone \"\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 13
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 29
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_digits_phone_number(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51803261,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user create a username \"\" without digits",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 23
+                }
+              ],
+              "location": "RegistrationStepDef.user_create_a_username_without_digits(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 97718423,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter a email \"\" address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_email_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107727100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enter a valid password \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87762882,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user reenter the \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 17
+                }
+              ],
+              "location": "RegistrationStepDef.user_reenter_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8126591155,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "click on the register",
+            "match": {
+              "location": "RegistrationStepDef.click_on_the_register()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 297778960,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify the invalid feedback",
+            "match": {
+              "location": "RegistrationStepDef.verify_the_invalid_feedback()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegPageUS_2"
+          },
+          {
+            "name": "@BlankField"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3741464569,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 160605611,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User navigates to registration page",
+            "match": {
+              "location": "RegistrationStepDef.user_navigates_to_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10863806285,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "register with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials-on-the-registration-page;register-with-invalid-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 235490427,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 584339746,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a  9 digit SSN \"343-78-9345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 15
+                },
+                {
+                  "val": "\"343-78-9345\"",
+                  "offset": 27
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_digit_SSN(Integer,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 109686608,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters a name\" Filiz\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" Filiz\"",
+                  "offset": 18
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61925732,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enter a lastname \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 200568579,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter an address \"Turkey\" with zip",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Turkey\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_an_address_with_zip(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 250948448,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enter a 10 digits phone \"123-385-2354\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 13
+                },
+                {
+                  "val": "\"123-385-2354\"",
+                  "offset": 29
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_digits_phone_number(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72143402,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user create a username \"User\" without digits",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User\"",
+                  "offset": 23
+                }
+              ],
+              "location": "RegistrationStepDef.user_create_a_username_without_digits(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 284626812,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter a email \"usertestr@gmail.com\" address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usertestr@gmail.com\"",
+                  "offset": 19
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_email_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 205653921,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enter a valid password \"Abcds!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abcds!\"",
+                  "offset": 28
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 235206421,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user reenter the \"Abcds!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abcds!\"",
+                  "offset": 17
+                }
+              ],
+              "location": "RegistrationStepDef.user_reenter_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8259828768,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "click on the register",
+            "match": {
+              "location": "RegistrationStepDef.click_on_the_register()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29096064,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify the invalid feedback",
+            "match": {
+              "location": "RegistrationStepDef.verify_the_invalid_feedback()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegPageUS_2"
+          },
+          {
+            "name": "@BlankField"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5464044025,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 196662082,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User navigates to registration page",
+            "match": {
+              "location": "RegistrationStepDef.user_navigates_to_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5553772038,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "register with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials-on-the-registration-page;register-with-invalid-credentials;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 233464067,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 864457047,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a  9 digit SSN \"343-78-9345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 15
+                },
+                {
+                  "val": "\"343-78-9345\"",
+                  "offset": 27
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_digit_SSN(Integer,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 68533794,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters a name\" Filiz\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" Filiz\"",
+                  "offset": 18
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50640289,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enter a lastname \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 86136299,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter an address \"Turkey\" with zip",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Turkey\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_an_address_with_zip(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 85674090,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enter a 10 digits phone \"123-385-2354\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 13
+                },
+                {
+                  "val": "\"123-385-2354\"",
+                  "offset": 29
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_digits_phone_number(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 66787166,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user create a username \"User\" without digits",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User\"",
+                  "offset": 23
+                }
+              ],
+              "location": "RegistrationStepDef.user_create_a_username_without_digits(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100567175,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter a email \"usertestr@gmail.com\" address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usertestr@gmail.com\"",
+                  "offset": 19
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_email_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 48385005,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enter a valid password \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77498658,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user reenter the \"Abcds!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abcds!\"",
+                  "offset": 17
+                }
+              ],
+              "location": "RegistrationStepDef.user_reenter_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8068693015,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "click on the register",
+            "match": {
+              "location": "RegistrationStepDef.click_on_the_register()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60551351,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify the invalid feedback",
+            "match": {
+              "location": "RegistrationStepDef.verify_the_invalid_feedback()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegPageUS_2"
+          },
+          {
+            "name": "@BlankField"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3539025147,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 156269770,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User navigates to registration page",
+            "match": {
+              "location": "RegistrationStepDef.user_navigates_to_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7056492378,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "register with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials-on-the-registration-page;register-with-invalid-credentials;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 151643607,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 182917769,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a  9 digit SSN \"343-78-9345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 15
+                },
+                {
+                  "val": "\"343-78-9345\"",
+                  "offset": 27
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_digit_SSN(Integer,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 81089422,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters a name\" Filiz\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\" Filiz\"",
+                  "offset": 18
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 70519759,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enter a lastname \"Abcde\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abcde\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51569810,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter an address \"\" with zip",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_an_address_with_zip(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54095399,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enter a 10 digits phone \"\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 13
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 29
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_digits_phone_number(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76804172,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user create a username \"User\" without digits",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User\"",
+                  "offset": 23
+                }
+              ],
+              "location": "RegistrationStepDef.user_create_a_username_without_digits(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 157030795,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter a email \"usertestr@gmail.com\" address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usertestr@gmail.com\"",
+                  "offset": 19
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_email_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 92918675,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enter a valid password \"Abcds!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abcds!\"",
+                  "offset": 28
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 74645561,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user reenter the \"Abcds!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abcds!\"",
+                  "offset": 17
+                }
+              ],
+              "location": "RegistrationStepDef.user_reenter_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8278688560,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "click on the register",
+            "match": {
+              "location": "RegistrationStepDef.click_on_the_register()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat gmibank.step_definitions.RegistrationStepDef.verify_the_invalid_feedback(RegistrationStepDef.java:108)\n\tat ✽.verify the invalid feedback(src/test/resources/features/RegistrationPageUS_2.feature:21)\n",
+              "duration": 10028344463,
+              "status": "failed"
+            },
+            "line": 21,
+            "name": "verify the invalid feedback",
+            "match": {
+              "location": "RegistrationStepDef.verify_the_invalid_feedback()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegPageUS_2"
+          },
+          {
+            "name": "@BlankField"
+          }
+        ]
+      }
+    ],
+    "name": "Invalid credentials on the registration page",
+    "description": "  System should not allow anyone to register with invalid credentials",
+    "id": "invalid-credentials-on-the-registration-page",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/RegistrationPageUS_2.feature",
+    "tags": [
+      {
+        "name": "@RegPageUS_2",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

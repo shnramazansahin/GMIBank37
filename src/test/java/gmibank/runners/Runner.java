@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "gmibank/stepdefinations",
-        tags = "@US6",
+        tags = "@Us6",
         dryRun = false
 
 

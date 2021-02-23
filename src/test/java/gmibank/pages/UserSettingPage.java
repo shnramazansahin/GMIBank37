@@ -11,16 +11,16 @@ public class UserSettingPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//label[1]")
+    @FindBy(xpath = "(//label)[1]")
     public WebElement firstname;
 
-    @FindBy(xpath = "//label[2]")
+    @FindBy(xpath = "(//label)[2]")
     public WebElement lastname;
 
-    @FindBy(xpath = "//label[3]")
+    @FindBy(xpath = "(//label)[3]")
     public WebElement email;
 
-    @FindBy(xpath = "//label[4]")
+    @FindBy(xpath = "(//label)[4]")
     public WebElement language;
 
     @FindBy(xpath = "//input[@id='firstName']")
@@ -34,6 +34,12 @@ public class UserSettingPage {
 
     @FindBy(xpath = "//select[@id='langKey']")
     public WebElement languageOpt;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButton;
+
+
+    //button[@type='submit']
 
 
 }

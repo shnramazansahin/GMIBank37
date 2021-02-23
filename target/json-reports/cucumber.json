@@ -3,36 +3,28 @@
     "line": 2,
     "elements": [
       {
-        "line": 3,
-        "name": "user on the application page",
+        "line": 21,
+        "name": "userinfo should be editable and match with selected language",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": []
-      },
-      {
-        "line": 20,
-        "name": "login page should not be accessbile with invalid credantials",
-        "description": "",
-        "id": "userinfo-segment;login-page-should-not-be-accessbile-with-invalid-credantials;;2",
+        "id": "userinfo-segment;userinfo-should-be-editable-and-match-with-selected-language;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9792212000,
+              "duration": 14682592800,
               "status": "passed"
             },
             "line": 5,
             "name": "user  on the login page",
             "match": {
-              "location": "US6.user_on_the_login_page()"
+              "location": "US6_1_UI.user_on_the_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 119479700,
+              "duration": 117482900,
               "status": "passed"
             },
             "line": 6,
@@ -44,13 +36,13 @@
                   "offset": 27
                 }
               ],
-              "location": "US6.user_enters_valid_username(String)"
+              "location": "US6_1_UI.user_enters_valid_username(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 101112700,
+              "duration": 91460900,
               "status": "passed"
             },
             "line": 7,
@@ -62,68 +54,112 @@
                   "offset": 26
                 }
               ],
-              "location": "US6.user_enter_valid_password(String)"
+              "location": "US6_1_UI.user_enter_valid_password(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 159407800,
+              "duration": 66579700,
               "status": "passed"
             },
             "line": 8,
-            "name": "user click on the sign in button",
+            "name": "user clicks on the Sign In button",
             "match": {
-              "location": "US5.user_click_on_the_sign_in_button()"
+              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 61572600,
+              "duration": 400597800,
               "status": "passed"
             },
             "line": 9,
-            "name": "user clicks on the \"team 37\"",
+            "name": "user clicks on the user name \"team 37\"",
             "match": {
               "arguments": [
                 {
                   "val": "\"team 37\"",
-                  "offset": 19
+                  "offset": 29
                 }
               ],
-              "location": "US6.user_clicks_on_the(String)"
+              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.ElementNotInteractableException: element not interactable\n  (Session info: chrome\u003d88.0.4324.182)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-QHIGBOM\u0027, ip: \u002710.0.0.39\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\User\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:49337}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 946ae939d2a8a93c2514156fd4245909\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat gmibank.stepdefinations.US6.clicks_user_info_button(US6.java:43)\r\n\tat ✽.clicks user info button(src\\test\\resources\\features\\US6.feature:10)\r\n",
-              "duration": 16086151700,
-              "status": "failed"
+              "duration": 78437600,
+              "status": "passed"
             },
             "line": 10,
-            "name": "clicks user info button",
+            "name": "clicks team name \"userinfo\" button",
             "match": {
-              "location": "US6.clicks_user_info_button()"
+              "arguments": [
+                {
+                  "val": "\"userinfo\"",
+                  "offset": 17
+                }
+              ],
+              "location": "US6_1_UI.clicks_team_name_button(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 286093600,
+              "status": "passed"
             },
             "line": 11,
-            "name": "user verifys options \"populated info\"",
-            "match": {},
+            "name": "user set the language as English",
+            "match": {
+              "location": "US6_1_UI.user_set_the_language_as_English()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 45200,
-              "status": "skipped"
+              "duration": 93626700,
+              "status": "passed"
             },
             "line": 12,
+            "name": "user clicks on the save button \"save\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"save\"",
+                  "offset": 31
+                }
+              ],
+              "location": "US6_1_UI.user_clicks_on_the_save_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2139456700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user verifys options \"populated info\" in English",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"populated info\"",
+                  "offset": 21
+                }
+              ],
+              "location": "US6_1_UI.user_verifys_options_in_English(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148922900,
+              "status": "passed"
+            },
+            "line": 14,
             "name": "user update the firstname \"Newfirst\"",
             "match": {
               "arguments": [
@@ -132,16 +168,16 @@
                   "offset": 26
                 }
               ],
-              "location": "US6.user_update_the_firstname(String)"
+              "location": "US6_1_UI.user_update_the_firstname(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 356500,
-              "status": "skipped"
+              "duration": 144912400,
+              "status": "passed"
             },
-            "line": 13,
+            "line": 15,
             "name": "user update the lastname \"NewLast\"",
             "match": {
               "arguments": [
@@ -150,16 +186,16 @@
                   "offset": 25
                 }
               ],
-              "location": "US6.user_update_the_lastname(String)"
+              "location": "US6_1_UI.user_update_the_lastname(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 11200,
-              "status": "skipped"
+              "duration": 175592100,
+              "status": "passed"
             },
-            "line": 14,
+            "line": 16,
             "name": "user update the email \"new@gmail.com\"",
             "match": {
               "arguments": [
@@ -168,14 +204,203 @@
                   "offset": 22
                 }
               ],
-              "location": "US6.user_update_the_email(String)"
+              "location": "US6_1_UI.user_update_the_email(String)"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 880726400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user closes the applicaiton",
+            "match": {
+              "location": "US6_1_UI.user_closes_the_applicaiton()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@US6"
+            "name": "@Us6"
+          },
+          {
+            "name": "@Eng"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "userinfo should be in Turkish",
+        "description": "",
+        "id": "userinfo-segment;userinfo-should-be-in-turkish;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11541563400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user  on the login page",
+            "match": {
+              "location": "US6_1_UI.user_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 106968500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user enters valid username \"wallstreetbets\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"wallstreetbets\"",
+                  "offset": 27
+                }
+              ],
+              "location": "US6_1_UI.user_enters_valid_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 89323800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user enter valid password \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 26
+                }
+              ],
+              "location": "US6_1_UI.user_enter_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76841900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user clicks on the Sign In button",
+            "match": {
+              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 363383100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user clicks on the user name \"team 37\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"team 37\"",
+                  "offset": 29
+                }
+              ],
+              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77491000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "clicks team name \"userinfo\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userinfo\"",
+                  "offset": 17
+                }
+              ],
+              "location": "US6_1_UI.clicks_team_name_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 268426300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user set the language as Turksih",
+            "match": {
+              "location": "US6_1_UI.user_set_the_language_as_Turksih()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76303800,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user clicks on the save button \"save\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"save\"",
+                  "offset": 31
+                }
+              ],
+              "location": "US6_1_UI.user_clicks_on_the_save_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5144912300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user verifys options \"populated info\" in Turkish",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"populated info\"",
+                  "offset": 21
+                }
+              ],
+              "location": "US6_1_UI.user_verifys_options_in_Turkish(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 800320600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user closes the applicaiton",
+            "match": {
+              "location": "US6_1_UI.user_closes_the_applicaiton()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us6"
+          },
+          {
+            "name": "@TR"
           }
         ]
       }
@@ -187,7 +412,7 @@
     "uri": "src\\test\\resources\\features\\US6.feature",
     "tags": [
       {
-        "name": "@US6",
+        "name": "@Us6",
         "type": "Tag",
         "location": {
           "line": 1,

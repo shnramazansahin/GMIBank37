@@ -1,4 +1,4 @@
-@US
+@US5
 Feature: no login with invalid
   Background: user on the login page
   Scenario Outline: login page should not be accessbile with invalid credantials
@@ -14,6 +14,3 @@ Feature: no login with invalid
       |wrongusername|1234As$       |
       |wallstreetbets|wrongpassword|
       |wrongusername|wrongpassword |
-
-
-

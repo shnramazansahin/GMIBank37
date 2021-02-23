@@ -13,6 +13,10 @@ public class SingedInPage {
 
     @FindBy(id="account-menu")
     public WebElement userNameButton;
-    @FindBy(xpath="//span[contains(.,'User Info')]")
+
+    @FindBy(xpath="(//span)[21]")
     public WebElement userInfo;
+
+
+
 }

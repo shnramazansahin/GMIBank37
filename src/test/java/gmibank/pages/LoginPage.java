@@ -14,15 +14,20 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@name='password']")
     public  WebElement password;
+
     @FindBy(xpath = "(//span[contains(.,'Sign in')])[3]")
     public WebElement signButton;
+
     @FindBy(xpath = "//strong[contains(.,'Failed')]")
     public WebElement failAlert;
+
     @FindBy(xpath = "//span[contains(.,'forget ')]")
     public WebElement resetOption;
+
     @FindBy(xpath = "//span[contains(.,'new')]")
     public WebElement createNewAccount;
 
-
+    @FindBy(xpath = "(//button[@type='button'])[3]")
+    public WebElement cancelButton;
 
 }

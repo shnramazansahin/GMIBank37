@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="37.856547">
-    <testcase classname="userinfo segment" name="userinfo should be editable and match with selected language" time="19.309978">
-        <system-out><![CDATA[Given user  on the login page...............................................passed
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="17.315356">
+    <testcase classname="userinfo segment" name="login page should not be accessbile in English with invalid credantials" time="17.315356">
+        <failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at gmibank.stepdefinations.US6_UI.verifys_populated_info_is(US6_UI.java:124)&#13;&#10;&#9;at ✽.verifys populated info is &quot;turkish&quot;(src\test\resources\features\US6.feature:17)&#13;&#10;"><![CDATA[Given user  on the login page...............................................passed
 When user enters valid username "wallstreetbets"............................passed
 When user enter valid password "1234As$"....................................passed
-When user clicks on the Sign In button......................................passed
+And user click on the sign in button........................................passed
 When user clicks on the user name "team 37".................................passed
 When clicks team name "userinfo" button.....................................passed
-When user set the language as English.......................................passed
-When user clicks on the save button "save"..................................passed
-When user verifys options "populated info" in English.......................passed
+When user verifys options "populated info"..................................passed
 And user update the firstname "Newfirst"....................................passed
 And user update the lastname "NewLast"......................................passed
 And user update the email "new@gmail.com"...................................passed
-Then user closes the applicaiton............................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="userinfo segment" name="userinfo should be in Turkish" time="18.546569">
-        <system-out><![CDATA[Given user  on the login page...............................................passed
-When user enters valid username "wallstreetbets"............................passed
-When user enter valid password "1234As$"....................................passed
-When user clicks on the Sign In button......................................passed
-When user clicks on the user name "team 37".................................passed
-When clicks team name "userinfo" button.....................................passed
-When user set the language as Turksih.......................................passed
+And user update the language "turksih"......................................passed
 When user clicks on the save button "save"..................................passed
-When user verifys options "populated info" in Turkish.......................passed
-Then user closes the applicaiton............................................passed
-]]></system-out>
+Then verifys populated info is "turkish"....................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at gmibank.stepdefinations.US6_UI.verifys_populated_info_is(US6_UI.java:124)
+	at ✽.verifys populated info is "turkish"(src\test\resources\features\US6.feature:17)
+]]></failure>
     </testcase>
 </testsuite>

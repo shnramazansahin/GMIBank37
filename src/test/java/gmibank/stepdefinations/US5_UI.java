@@ -12,7 +12,7 @@ import org.junit.Assert;
 
 import java.util.Set;
 
-public class US5 {
+public class US5_UI {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     RegistrationPage registrationPage= new RegistrationPage();

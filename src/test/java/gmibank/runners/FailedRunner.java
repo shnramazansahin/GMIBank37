@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         },
         features = "target/FailedReRun.txt",
         glue = "gmibank/stepdefinations",
-        dryRun = true
+        dryRun = false
 
 
 

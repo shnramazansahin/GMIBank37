@@ -15,4 +15,8 @@ public class MainPage {
 
     @FindBy(linkText ="Sign in")
     public WebElement signInButton;
+
+    @FindBy(xpath ="//span[contains(.,'Register')]")
+    public WebElement registerButton;
 }
+

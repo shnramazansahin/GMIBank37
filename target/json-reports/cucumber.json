@@ -3,41 +3,182 @@
     "line": 2,
     "elements": [
       {
-        "line": 3,
-        "name": "Gmi",
+        "line": 9,
+        "name": "System should not allow to make updates with invalid credentials",
         "description": "",
-        "id": "test;gmi",
+        "id": "invalid-credentials;system-should-not-allow-to-make-updates-with-invalid-credentials;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 18991443800,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 4,
-            "name": "user goes to page",
-            "match": {
-              "location": "test.user_goes_to_page()"
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
             },
-            "keyword": "Given "
+            "line": 5,
+            "name": "click register",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user enter the \"12345gmail.com\" and see  \"This field is invalid\"",
+            "match": {},
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@test"
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "System should not allow to make updates with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials;system-should-not-allow-to-make-updates-with-invalid-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user enter the \"12345@gmailcom\" and see  \"This field is invalid\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "System should not allow to make updates with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials;system-should-not-allow-to-make-updates-with-invalid-credentials;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user enter the \"Aysegmail.com\" and see  \"This field is invalid\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "System should not allow to make updates with invalid credentials",
+        "description": "",
+        "id": "invalid-credentials;system-should-not-allow-to-make-updates-with-invalid-credentials;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user enter the \"Ayse@gmailcom\" and see  \"This field is invalid\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
           }
         ]
       }
     ],
-    "name": "test",
+    "name": "invalid credentials",
     "description": "",
-    "id": "test",
+    "id": "invalid-credentials",
     "keyword": "Feature",
-    "uri": "src\\test\\resources\\features\\Dummy.feature",
+    "uri": "src\\test\\resources\\features\\US7.feature",
     "tags": [
       {
-        "name": "@test",
+        "name": "@invalid",
         "type": "Tag",
         "location": {
           "line": 1,

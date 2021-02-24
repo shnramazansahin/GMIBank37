@@ -1,13 +1,31 @@
-@RegPageUS_2
+@RegPage
 
-Feature: Invalid credentials on the registration page
-  System should not allow anyone to register with invalid credentials
+Feature:Registration page feature
 
   Background:
   Given User is on the home page
     And User navigates to registration page
-  @BlankField
-  Scenario Outline: register with invalid credentials
+
+  @ValidCredentials
+  Scenario Outline: Register with valid credentials
+    Given user enters a  9 digit SSN "<SSN>"
+    When user enters a name" <name>"
+    When user enter a lastname "<lastname>"
+    When user enter an address "<address>" with zip
+    When user enter a 10 digits phone "<phone>" number
+    When user create a username "<username>" without digits
+    When user enter a email "<email>" address
+    When user enter a valid password "<password>"
+    When user reenter the "<confirmation password>"
+    When  click on the register
+    Then verify the success message
+    Examples:
+      |SSN        |name    |lastname|address             |phone       |username|email         |password|confirmation password|
+      |423-45-6719|Patrick |Jane    |123 WALLSTREET 78762|832-654-3210|Demo12  |demo@gmail.com|1234As  |1234As               |
+
+
+  @InvalidCredentials
+  Scenario Outline: Register with invalid credentials
     Given user enters a  9 digit SSN "<SSN>"
     When user enters a name" <name>"
     When user enter a lastname "<lastname>"
@@ -29,7 +47,7 @@ Feature: Invalid credentials on the registration page
 
    @InvalidSSN
    Scenario Outline: SSN number cannot be of any chars, spec chars nor "0" and "9" except "-"
-     When User enter invalid "<SSN>"
+     When User enters invalid as ssn "<SSN>"
      Then System should display "Your SSN is invalid"
      Examples:
      |  SSN        |
@@ -37,6 +55,7 @@ Feature: Invalid credentials on the registration page
      |000-76-5670  |
      |abc-65-7652  |
      |765987897    |
+     |123-44-444444|
   @InvalidPhoneNumber
   Scenario Outline: Mobile phone number cannot be of any chars nor spec chars except "-"
     When User enter invalid mobile "<phone number>"
@@ -55,12 +74,12 @@ Feature: Invalid credentials on the registration page
     Then System should display email message "This field is invalid"
     Examples:
      |  emailFormat         |
-   # | testuser@gmail.com  |
      | testuser@.gmail.com  |
      | testusergmail.com    |
      | testuser@gmailcom    |
      | testuser@gmail.com.  |
-
+     #| testuser@gmail.3    |??
+     | .testuser@gmail.com  |
 
 
 

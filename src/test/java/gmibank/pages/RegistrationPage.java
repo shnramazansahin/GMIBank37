@@ -17,7 +17,7 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public List<WebElement> fieldList;
 
-    @FindBy(id = "ssn")
+    @FindBy(id= "ssn")
     public WebElement ssnTextbox;
 
     @FindBy(id = "firstname")
@@ -58,6 +58,9 @@ public class RegistrationPage extends BasePage {
 
     @FindBy (xpath = "//div[contains(text(),'translation-not-found')]")
     public WebElement ssnWarningmessage;
+
+    @FindBy(xpath = "//strong[contains(text(),'Registration saved!')]")
+    public WebElement successMessage;
 
 
 

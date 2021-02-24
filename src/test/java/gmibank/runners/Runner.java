@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 },
         features = "src/test/resources",
         glue = "gmibank/step_definitions",
-        tags = "@BlankField",
-        dryRun = false
+        tags = "@Customer",
+        dryRun = true
 )
 
 public class Runner {

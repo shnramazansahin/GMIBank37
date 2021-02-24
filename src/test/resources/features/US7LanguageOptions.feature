@@ -1,0 +1,1 @@
+  #There should not be an option of any other language other than English or Turkish

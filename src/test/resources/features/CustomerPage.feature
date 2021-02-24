@@ -3,7 +3,9 @@
     Create a new customer
 
     Background:
-      Given User loged in
+      Given User goes to login page
+      When user enters a valid username and password
+      Then User logs in
       And User navigates to my operations dropdown
       And User clicks on the mananage customers
       And User clicks on create a new customer button

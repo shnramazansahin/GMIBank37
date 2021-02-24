@@ -1,28 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0.002917">
-    <testcase classname="Customer creation feature" name="User able to create new customer" time="0.002917">
-        <skipped><![CDATA[Given User logs in..........................................................skipped
-And User navigates to my operations dropdown................................undefined
-And User clicks on the mananage customers...................................undefined
-And User clicks on create a new customer button.............................undefined
-Given User enters  9 digit SSN in ssn search box "SSN"......................undefined
-When User enters a first name as "FirstName"................................undefined
-When User enters a lastname "LastName"......................................undefined
-When User enters a middel initials as "Middel Initials".....................undefined
-When User enters an email  address as"Email"................................undefined
-When User enters 10 digits mobile phone number as "Mobile Phone Number".....undefined
-When User enters 10 digits phone number as "Phone Number"...................undefined
-When User enters a zip code as "Zip Code"...................................undefined
-When User enters an address as "Address"....................................undefined
-When User enters a city name as "City"......................................undefined
-When User enters a 9 digits SSN as "SSN"....................................undefined
-When User creates a date as "Create Date"...................................undefined
-When User can select a country as "name"....................................undefined
-When User enters as a state as "name" in US.................................undefined
-When User can select an user type as "User Type"............................undefined
-When User can select an account as "Account Type"...........................undefined
-When User clicks on the save button.........................................undefined
-Then Verify the success message as "".......................................undefined
-]]></skipped>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="50.080457">
+    <testcase classname="Customer creation feature" name="User able to create new customer" time="50.080457">
+        <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name='firstname']&quot;}&#10;  (Session info: chrome=88.0.4324.192)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'Imacs-iMac.local', ip: '192.168.1.44', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '14'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.192, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/3y/4pw3tlsd4mj...}, goog:chromeOptions: {debuggerAddress: localhost:51858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f14cbcf6ece081e89b00b299db68ee82&#10;*** Element info: {Using=name, value=firstname}&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)&#10;&#9;at org.openqa.selenium.By$ByName.findElement(By.java:284)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#10;&#9;at com.sun.proxy.$Proxy18.clear(Unknown Source)&#10;&#9;at gmibank.step_definitions.CustomerPageStepDef.user_enters_a_first_name_as(CustomerPageStepDef.java:53)&#10;&#9;at ✽.User enters a first name as &quot;FirstName&quot;(src/test/resources/features/CustomerPage.feature:16)&#10;"><![CDATA[Given User goes to login page...............................................passed
+When user enters a valid username and password..............................passed
+Then User logs in...........................................................passed
+And User navigates to my operations dropdown................................passed
+And User clicks on the mananage customers...................................passed
+And User clicks on create a new customer button.............................passed
+Given User enters  9 digit SSN in ssn search box "SSN"......................passed
+When User enters a first name as "FirstName"................................failed
+When User enters a lastname "LastName"......................................skipped
+When User enters a middel initials as "Middel Initials".....................skipped
+When User enters an email  address as"Email"................................skipped
+When User enters 10 digits mobile phone number as "Mobile Phone Number".....skipped
+When User enters 10 digits phone number as "Phone Number"...................skipped
+When User enters a zip code as "Zip Code"...................................skipped
+When User enters an address as "Address"....................................skipped
+When User enters a city name as "City"......................................skipped
+When User enters a 9 digits SSN as "SSN"....................................skipped
+When User creates a date as "Create Date"...................................skipped
+When User can select a country as "name"....................................skipped
+When User enters as a state as "name" in US.................................skipped
+When User can select an user type as "User Type"............................skipped
+When User can select an account as "Account Type"...........................skipped
+When User clicks on the save button.........................................skipped
+Then Verify the success message as "".......................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='firstname']"}
+  (Session info: chrome=88.0.4324.192)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Imacs-iMac.local', ip: '192.168.1.44', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.192, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/3y/4pw3tlsd4mj...}, goog:chromeOptions: {debuggerAddress: localhost:51858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f14cbcf6ece081e89b00b299db68ee82
+*** Element info: {Using=name, value=firstname}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.clear(Unknown Source)
+	at gmibank.step_definitions.CustomerPageStepDef.user_enters_a_first_name_as(CustomerPageStepDef.java:53)
+	at ✽.User enters a first name as "FirstName"(src/test/resources/features/CustomerPage.feature:16)
+]]></failure>
     </testcase>
 </testsuite>

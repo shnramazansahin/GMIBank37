@@ -8,6 +8,12 @@ public class CustomerPage extends BasePage {
     @FindBy(id="entity-menu")
     public WebElement entityMenuDropdown;
 
+    @FindBy(xpath = "//span[contains(text(),'Manage Customers')]")
+    public WebElement manageCustomerButton;
+
+    @FindBy(id="jh-create-entity")
+    public WebElement createCustomerButton;
+
     @FindBy(name = "search-ssn")
     public WebElement searchSsnField;
 

@@ -1,23 +1,22 @@
 package gmibank.step_definitions;
+import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gmibank.pages.CustomerPage;
 import gmibank.pages.LoginPage;
+import gmibank.utilities.Driver;
 
 public class CustomerPageStepDef {
 
     CustomerPage customerPage=new CustomerPage();
     LoginPage loginPage=new LoginPage();
 
-
-    @Given("User loged in")
-    public void userLogedIn() {
-        loginPage.login("t37employee");
-    }
-
     @Given("User navigates to my operations dropdown")
     public void user_navigates_to_my_operations_dropdown() {
+
+       // Driver.selectAnItemFromDropdown(customerPage.entityMenuDropdown,"Manage Customers"); There is no select class for locator
+        Driver.waitAndClick(customerPage.entityMenuDropdown,3);
 
 
     }
@@ -25,70 +24,105 @@ public class CustomerPageStepDef {
     @Given("User clicks on the mananage customers")
     public void user_clicks_on_the_mananage_customers() {
 
+        Driver.waitAndClick(customerPage.manageCustomerButton,3);
+
+
     }
 
     @Given("User clicks on create a new customer button")
     public void user_clicks_on_create_a_new_customer_button() {
 
+        Driver.waitAndClick(customerPage.createCustomerButton,3);
+        System.out.println("hereeeeee");
+
     }
 
     @Given("User enters  {int} digit SSN in ssn search box {string}")
-    public void user_enters_digit_SSN_in_ssn_search_box(Integer int1, String string) {
+    public void user_enters_digit_SSN_in_ssn_search_box(Integer int1, String ssn) {
+
+        Driver.waitAndSendText(customerPage.searchSsnField,ssn,3);
+        //customerPage.searchSsnField.sendKeys(string);
+        Driver.waitAndClick(customerPage.searchButton,3);
+
 
     }
 
     @When("User enters a first name as {string}")
-    public void user_enters_a_first_name_as(String string) {
+    public void user_enters_a_first_name_as(String firstname) {
 
+        Driver.waitAndSendText(customerPage.firstNameField,firstname,3);
     }
 
     @When("User enters a lastname {string}")
-    public void user_enters_a_lastname(String string) {
+    public void user_enters_a_lastname(String lastname) {
+
+        Driver.waitAndSendText(customerPage.searchSsnField,lastname,3);
 
     }
 
     @When("User enters a middel initials as {string}")
-    public void user_enters_a_middel_initials_as(String string) {
+    public void user_enters_a_middel_initials_as(String midInitials) {
+
+        Driver.waitAndSendText(customerPage.middleInitialField,midInitials,3);
 
     }
 
     @When("User enters an email  address as{string}")
-    public void user_enters_an_email_address_as(String string) {
+    public void user_enters_an_email_address_as(String email) {
+
+        Driver.waitAndSendText(customerPage.addressField,email,3);
 
     }
 
     @When("User enters {int} digits mobile phone number as {string}")
-    public void user_enters_digits_mobile_phone_number_as(Integer int1, String string) {
+    public void user_enters_digits_mobile_phone_number_as(Integer int1, String mobilePN) {
+
+        Driver.waitAndSendText(customerPage.mobilePhoneNumberField,mobilePN,3);
 
     }
 
     @When("User enters {int} digits phone number as {string}")
-    public void user_enters_digits_phone_number_as(Integer int1, String string) {
+    public void user_enters_digits_phone_number_as(Integer int1, String phone) {
+
+        Driver.waitAndSendText(customerPage.phoneNumberField,phone,3);
+
 
     }
 
     @When("User enters a zip code as {string}")
-    public void user_enters_a_zip_code_as(String string) {
+    public void user_enters_a_zip_code_as(String zipCode) {
+
+        Driver.waitAndSendText(customerPage.zipCodeField,zipCode,3);
 
     }
 
     @When("User enters an address as {string}")
-    public void user_enters_an_address_as(String string) {
+    public void user_enters_an_address_as(String address) {
+
+        Driver.waitAndSendText(customerPage.addressField,address,3);
 
     }
 
     @When("User enters a city name as {string}")
-    public void user_enters_a_city_name_as(String string) {
+    public void user_enters_a_city_name_as(String city) {
+
+        Driver.waitAndSendText(customerPage.cityField,city,3);
+
+
 
     }
 
     @When("User enters a {int} digits SSN as {string}")
-    public void user_enters_a_digits_SSN_as(Integer int1, String string) {
+    public void user_enters_a_digits_SSN_as(Integer int1, String ssn) {
+
+        Driver.waitAndSendText(customerPage.ssnField,ssn,3);
 
     }
 
     @When("User creates a date as {string}")
     public void user_creates_a_date_as(String string) {
+
+
 
     }
 
@@ -98,7 +132,9 @@ public class CustomerPageStepDef {
     }
 
     @When("User enters as a state as {string} in US")
-    public void user_enters_as_a_state_as_in_US(String string) {
+    public void user_enters_as_a_state_as_in_US(String state) {
+
+        Driver.waitAndSendText(customerPage.stateField,state,3);
 
     }
 
@@ -114,6 +150,8 @@ public class CustomerPageStepDef {
 
     @When("User clicks on the save button")
     public void user_clicks_on_the_save_button() {
+
+        Driver.waitAndClick(customerPage.saveButton,3);
 
     }
 

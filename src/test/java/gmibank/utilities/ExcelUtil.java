@@ -10,6 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+// We can use this excel utilities class to read and write excel files (for xls, xlsx files).
+// These are the reusable custom methods we can use in our test classes
+
 public class ExcelUtil {
 
     private Workbook workBook;
@@ -122,4 +126,5 @@ public class ExcelUtil {
         int column = getColumnsNames().indexOf(columnName);
         setCellData(value, row, column);
     }
+
 }

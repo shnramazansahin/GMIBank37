@@ -1,5 +1,4 @@
 package gmibank.utilities;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class Driver {//What?=>It is just to create, initialize the driver instance.(Singleton driver)
+public class Driver {
+    //What?=>It is just to create, initialize the driver instance.(Singleton driver)
     //Why?=>We don't want to create and initialize the driver when we don't need
     //We will create and initialize the driver when it is null
     //We can use Driver class with different browser(chrome,firefox,headless)
@@ -25,23 +25,36 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
     //create a driver instance
     static WebDriver driver;
     //to initialize the driver we create a static method
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver()
+    {
+
         //create the driver if and only if it is null
-        if (driver == null) {
+        if (driver == null)
+        {
             String browser = ConfigurationReader.getProperty("browser");
-            if ("chrome".equals(browser)) {
+            if ("chrome".equals(browser))
+            {
+                WebDriverManager.chromedriver().clearPreferences();
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
-            } else if ("firefox".equals(browser)) {
+            }
+            else if ("firefox".equals(browser))
+            {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
-            } else if ("ie".equals(browser)) {
+            }
+            else if ("ie".equals(browser))
+            {
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
-            } else if ("safari".equals(browser)) {
+            }
+            else if ("safari".equals(browser))
+            {
                 WebDriverManager.getInstance(SafariDriver.class).setup();
                 driver = new SafariDriver();
-            } else if ("chrome-headless".equals(browser)) {
+            }
+            else if ("chrome-headless".equals(browser))
+            {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
             }
@@ -71,6 +84,7 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
             }
         }
     }
+
 
     public static void waitAndSendText(WebElement element,String text, int timeout) {
         for (int i = 0; i < timeout; i++) {
@@ -138,6 +152,21 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         }
     }
 
+    public static void editTextBox(WebElement element, String inputValue) {
+        waitAndClick(element,3);
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.BACK_SPACE);
+        element.sendKeys(inputValue);
+        element.sendKeys(Keys.TAB);
+    }
+
+    public static void sendTextAndEnter(WebElement element, String inputValue) {
+        waitAndClick(element,3);
+        element.sendKeys(inputValue);
+        element.sendKeys(Keys.ENTER);
+    }
+
+
     public static void executeJScommand(WebElement element, String command) {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command, element);
@@ -154,6 +183,25 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         }
 
     }
-    //comments to be added
-    //Here some changes made on local branch
+
+
+
+
+
+    public static WebElement returnWebElement(String xpath)
+    {
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+    public static void ConfigurationReaderValue(String value)
+    {
+        Driver.getDriver().get(ConfigurationReader.getProperty(value));
+    }
+
+    public static String returnConfigurationReaderValue(String value)
+    {
+        return ConfigurationReader.getProperty(value);
+    }
+
 }
+

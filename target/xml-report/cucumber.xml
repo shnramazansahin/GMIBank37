@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="4" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="5" time="7.383444">
+    <testcase classname="Invalid Email" name="Email id cannot contain just digits or chars without &quot;@&quot; sign or &quot;.&quot; extension" time="5.656376">
+        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)&#13;&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)&#13;&#10;&#9;at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)&#13;&#10;&#9;at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)&#13;&#10;&#9;at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)&#13;&#10;&#9;at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)&#13;&#10;"><![CDATA[Given user navigate to "http://www.gmibank.com/"............................passed
+Then click register.........................................................failed
+When user enter the "12345gmail.com" see "This field is invalid"............skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)
+	at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)
+	at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)
+	at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Invalid Email" name="Email id cannot contain just digits or chars without &quot;@&quot; sign or &quot;.&quot; extension 2" time="0.593497">
+        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)&#13;&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)&#13;&#10;&#9;at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)&#13;&#10;&#9;at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)&#13;&#10;&#9;at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)&#13;&#10;&#9;at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)&#13;&#10;"><![CDATA[Given user navigate to "http://www.gmibank.com/"............................passed
+Then click register.........................................................failed
+When user enter the "12345@gmailcom" see "This field is invalid"............skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)
+	at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)
+	at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)
+	at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Invalid Email" name="Email id cannot contain just digits or chars without &quot;@&quot; sign or &quot;.&quot; extension 3" time="0.566784">
+        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)&#13;&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)&#13;&#10;&#9;at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)&#13;&#10;&#9;at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)&#13;&#10;&#9;at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)&#13;&#10;&#9;at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)&#13;&#10;"><![CDATA[Given user navigate to "http://www.gmibank.com/"............................passed
+Then click register.........................................................failed
+When user enter the "Aysegmail.com" see "This field is invalid".............skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)
+	at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)
+	at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)
+	at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Invalid Email" name="Email id cannot contain just digits or chars without &quot;@&quot; sign or &quot;.&quot; extension 4" time="0.56611">
+        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)&#13;&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)&#13;&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)&#13;&#10;&#9;at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)&#13;&#10;&#9;at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)&#13;&#10;&#9;at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)&#13;&#10;&#9;at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)&#13;&#10;"><![CDATA[Given user navigate to "http://www.gmibank.com/"............................passed
+Then click register.........................................................failed
+When user enter the "Ayse@gmailcom" see "This field is invalid".............skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at gmibank.utilities.Driver.waitForVisibility(Driver.java:123)
+	at gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)
+	at gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)
+	at ✽.click register(src\test\resources\features\US7InvalidEmail.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Invalid Email" name="There should not be an option of any other language other than English or Turkish" time="0.000677">
+        <skipped message="The scenario has no steps"/>
+    </testcase>
+</testsuite>

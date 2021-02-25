@@ -1,5 +1,6 @@
 package gmibank.pages;
 
+import gmibank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -7,8 +8,7 @@ import java.util.List;
 
 public class RegistrationPage {
 
-    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
-    public WebElement firstbutton;
+
 
     @FindBy(linkText="Register")
     public WebElement registrationButton;
@@ -61,8 +61,12 @@ public class RegistrationPage {
     @FindBy(xpath = "//strong[contains(text(),'Registration saved!')]")
     public WebElement successMessage;
 
+    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    public WebElement firstbutton;
+
     public void navigateRegister(){
-        firstbutton.click();
+        Driver.waitForVisibility(firstbutton,5);
+        Driver.waitAndClick(firstbutton,5);
         registrationButton.click();
 
     }

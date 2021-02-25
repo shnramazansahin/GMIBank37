@@ -1,10 +1,8 @@
 package gmibank.utilities;
-
 import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ConfigurationReader {
-
     //The purpose of this class is to read the data in the configuration.properties file
     //Creating a Properties instance
     private static Properties properties;
@@ -30,5 +28,7 @@ public class ConfigurationReader {
     public static String getProperty(String key){
         return properties.getProperty(key);
     }
+
+
 
 }

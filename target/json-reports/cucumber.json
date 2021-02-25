@@ -1,0 +1,308 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 10,
+        "name": "Email id cannot contain just digits or chars without \"@\" sign or \".\" extension",
+        "description": "",
+        "id": "invalid-email;email-id-cannot-contain-just-digits-or-chars-without-\"@\"-sign-or-\".\"-extension;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5629875700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.gmibank.com/\"",
+                  "offset": 17
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.user_navigate_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat gmibank.utilities.Driver.waitForVisibility(Driver.java:123)\r\n\tat gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)\r\n\tat gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)\r\n\tat ✽.click register(src\\test\\resources\\features\\US7InvalidEmail.feature:5)\r\n",
+              "duration": 18745000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {
+              "location": "InvalidEmailStepsUS7.click_register()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8400,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user enter the \"12345gmail.com\" see \"This field is invalid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345gmail.com\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"This field is invalid\"",
+                  "offset": 36
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.userEnterTheSee(String,String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Email id cannot contain just digits or chars without \"@\" sign or \".\" extension",
+        "description": "",
+        "id": "invalid-email;email-id-cannot-contain-just-digits-or-chars-without-\"@\"-sign-or-\".\"-extension;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 537829500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.gmibank.com/\"",
+                  "offset": 17
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.user_navigate_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat gmibank.utilities.Driver.waitForVisibility(Driver.java:123)\r\n\tat gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)\r\n\tat gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)\r\n\tat ✽.click register(src\\test\\resources\\features\\US7InvalidEmail.feature:5)\r\n",
+              "duration": 54952400,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {
+              "location": "InvalidEmailStepsUS7.click_register()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10500,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user enter the \"12345@gmailcom\" see \"This field is invalid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345@gmailcom\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"This field is invalid\"",
+                  "offset": 36
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.userEnterTheSee(String,String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Email id cannot contain just digits or chars without \"@\" sign or \".\" extension",
+        "description": "",
+        "id": "invalid-email;email-id-cannot-contain-just-digits-or-chars-without-\"@\"-sign-or-\".\"-extension;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 512053900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.gmibank.com/\"",
+                  "offset": 17
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.user_navigate_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat gmibank.utilities.Driver.waitForVisibility(Driver.java:123)\r\n\tat gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)\r\n\tat gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)\r\n\tat ✽.click register(src\\test\\resources\\features\\US7InvalidEmail.feature:5)\r\n",
+              "duration": 54451600,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {
+              "location": "InvalidEmailStepsUS7.click_register()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user enter the \"Aysegmail.com\" see \"This field is invalid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Aysegmail.com\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"This field is invalid\"",
+                  "offset": 35
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.userEnterTheSee(String,String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Email id cannot contain just digits or chars without \"@\" sign or \".\" extension",
+        "description": "",
+        "id": "invalid-email;email-id-cannot-contain-just-digits-or-chars-without-\"@\"-sign-or-\".\"-extension;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 524431300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigate to \"http://www.gmibank.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.gmibank.com/\"",
+                  "offset": 17
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.user_navigate_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat gmibank.utilities.Driver.waitForVisibility(Driver.java:123)\r\n\tat gmibank.pages.RegistrationPage.navigateRegister(RegistrationPage.java:68)\r\n\tat gmibank.stepdefinations.InvalidEmailStepsUS7.click_register(InvalidEmailStepsUS7.java:29)\r\n\tat ✽.click register(src\\test\\resources\\features\\US7InvalidEmail.feature:5)\r\n",
+              "duration": 41424000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "click register",
+            "match": {
+              "location": "InvalidEmailStepsUS7.click_register()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8100,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user enter the \"Ayse@gmailcom\" see \"This field is invalid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ayse@gmailcom\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"This field is invalid\"",
+                  "offset": 35
+                }
+              ],
+              "location": "InvalidEmailStepsUS7.userEnterTheSee(String,String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "There should not be an option of any other language other than English or Turkish",
+        "description": "",
+        "id": "invalid-email;there-should-not-be-an-option-of-any-other-language-other-than-english-or-turkish",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [],
+        "tags": [
+          {
+            "name": "@invalid"
+          }
+        ]
+      }
+    ],
+    "name": "Invalid Email",
+    "description": "",
+    "id": "invalid-email",
+    "keyword": "Feature",
+    "uri": "src\\test\\resources\\features\\US7InvalidEmail.feature",
+    "tags": [
+      {
+        "name": "@invalid",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

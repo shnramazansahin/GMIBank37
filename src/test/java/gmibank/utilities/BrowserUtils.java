@@ -1,6 +1,5 @@
 package gmibank.utilities;
 
-
 import com.google.common.base.Function;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -16,7 +15,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class BrowserUtils {
-
     public static void wait(int secs) {
         try {
             Thread.sleep(1000 * secs);
@@ -214,6 +212,14 @@ public class BrowserUtils {
      */
     public static void doubleClick(WebElement element) {
         new Actions(Driver.getDriver()).doubleClick(element).build().perform();
+    }
+
+    public static void scrollUp(int pixel) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("window.scrollBy(0,-" + pixel + ")");
+    }
+
+    public static void scrollDown(int pixel) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("window.scrollBy(0," + pixel + ")");
     }
     /**
      * Changes the HTML attribute of a Web Element to the given value using JavaScript

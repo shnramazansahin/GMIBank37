@@ -1,7 +1,8 @@
 package gmibank.stepdefinations;
 
-import gmibank.utilities.ConfigurationReader;
-import gmibank.utilities.Driver;
+
+import cucumber.api.java.en.*;
+
 
 
 public class InvalidEmailStepsUS7 {

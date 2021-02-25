@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"
                 },
         features = "src/test/resources/features",
-        glue = "src/test/java/gmibank/stepdefinations",
+        glue = "/gmibank/stepdefinations",
         tags = "@invalid",
         dryRun = true
 )

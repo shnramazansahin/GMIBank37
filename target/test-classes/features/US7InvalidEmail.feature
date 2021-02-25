@@ -5,7 +5,7 @@
       Then click register
       When user enter the "<email>" see "<errormessage>"
 
-      Examples :
+      Examples: 
       |email          |errormessage        |
       |12345gmail.com |This field is invalid|
       |12345@gmailcom |This field is invalid|

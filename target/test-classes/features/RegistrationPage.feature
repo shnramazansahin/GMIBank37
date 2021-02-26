@@ -21,7 +21,8 @@ Feature:Registration page feature
     Then verify the success message
     Examples:
       |SSN        |name    |lastname|address             |phone       |username|email         |password|confirmation password|
-      |423-45-6719|Patrick |Jane    |123 WALLSTREET 78762|832-654-3210|Demo12  |demo@gmail.com|1234As  |1234As               |
+#      |423-45-6719|Patrick |Jane    |123 WALLSTREET 78762|832-654-3210|Demo12  |demo@gmail.com|1234As  |1234As               |
+      |760-45-6719|Walter |Bishop    |45 Science Ln 78562|832-654-3210|Genius  |bishop@gmail.com|1234As$  |1234As$               |
 
 
   @InvalidCredentials

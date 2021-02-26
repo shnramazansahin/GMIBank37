@@ -10,13 +10,14 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
-                },
-        features = "src/test/resources",
+        },
+        features = "src/test/resources/features",
         glue = "gmibank/step_definitions",
-        tags = "@Customer",
+        tags = "@Date",
         dryRun = false
+
+
+
 )
-
-public class Runner {
-
+public class CukesRunner {
 }

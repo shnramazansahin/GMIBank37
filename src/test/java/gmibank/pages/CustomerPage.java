@@ -3,6 +3,8 @@ package gmibank.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class CustomerPage extends BasePage {
 
     @FindBy(id="entity-menu")
@@ -20,13 +22,16 @@ public class CustomerPage extends BasePage {
     @FindBy(xpath = "//button[contains(text(),'Search')]")
     public WebElement searchButton;
 
-    @FindBy(xpath = "//div[contains(text(),'translation-not-found[gmiBankBackendApp.tPAccountRegistration.updated']")
+    @FindBy(xpath = "//div[@class='form-group']")
+    public List<WebElement> allFieldInfo;
+
+    @FindBy(xpath = "//div[contains(text(),'translation-not-found[gmiBankBackendApp.tPAccountR")
     public WebElement searchButtonMessage;
 
-    @FindBy(name = "firstname")
+    @FindBy(name = "firstName")
     public WebElement firstNameField;
 
-    @FindBy(name = "lastname")
+    @FindBy(name = "lastName")
     public WebElement lastNameField;
 
     @FindBy(name = "middleInitial")
@@ -56,13 +61,16 @@ public class CustomerPage extends BasePage {
     @FindBy(name = "ssn")
     public WebElement ssnField;
 
+    @FindBy(id="tp-customer-createDate")
+    public WebElement createDate;
+
     @FindBy(name = "country.id")
     public WebElement countryDropdown;
 
     @FindBy(name = "state")
     public WebElement stateField;
 
-    @FindBy(name = "country.id")
+    @FindBy(name = "user.id")
     public WebElement userDropdown;
 
     @FindBy(name = "accounts")
@@ -73,6 +81,12 @@ public class CustomerPage extends BasePage {
 
     @FindBy(id = "save-entity")
     public WebElement saveButton;
+
+    @FindBy()
+    public WebElement succesMessage;
+
+
+
 
 
 }

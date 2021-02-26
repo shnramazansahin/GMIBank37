@@ -27,7 +27,7 @@ public class Countries {
         this.country = country;
     }
 
-    Country []country;
+    Country[]country;
 
 
 

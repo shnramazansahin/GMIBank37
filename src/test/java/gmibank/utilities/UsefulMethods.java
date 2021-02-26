@@ -1,20 +1,77 @@
 package gmibank.utilities;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UsefulMethods {
 
+    public static Map<String, String> stateAbbreviationDictionary = new HashMap<>();
+
+    static {
+        stateAbbreviationDictionary.put("AL", "Alabama");
+        stateAbbreviationDictionary.put("AK", "Alaska");
+        stateAbbreviationDictionary.put("AZ", "Arizona");
+        stateAbbreviationDictionary.put("AR", "Arkansas");
+        stateAbbreviationDictionary.put("CA", "California");
+        stateAbbreviationDictionary.put("CO", "Colorado");
+        stateAbbreviationDictionary.put("CT", "Connecticut");
+        stateAbbreviationDictionary.put("DE", "Delaware");
+        stateAbbreviationDictionary.put("DC", "District Of Columbia");
+        stateAbbreviationDictionary.put("FL", "Florida");
+        stateAbbreviationDictionary.put("GA", "Georgia");
+        stateAbbreviationDictionary.put("HI", "Hawaii");
+        stateAbbreviationDictionary.put("ID", "Idaho");
+        stateAbbreviationDictionary.put("IL", "Illinois");
+        stateAbbreviationDictionary.put("IN", "Indiana");
+        stateAbbreviationDictionary.put("IA", "Iowa");
+        stateAbbreviationDictionary.put("KS", "Kansas");
+        stateAbbreviationDictionary.put("KY", "Kentucky");
+        stateAbbreviationDictionary.put("LA", "Louisiana");
+        stateAbbreviationDictionary.put("ME", "Maine");
+        stateAbbreviationDictionary.put("MD", "Maryland");
+        stateAbbreviationDictionary.put("MA", "Massachusetts");
+        stateAbbreviationDictionary.put("MI", "Michigan");
+        stateAbbreviationDictionary.put("MN", "Minnesota");
+        stateAbbreviationDictionary.put("MS", "Mississippi");
+        stateAbbreviationDictionary.put("MO", "Missouri");
+        stateAbbreviationDictionary.put("MT", "Montana");
+        stateAbbreviationDictionary.put("NE", "Nebraska");
+        stateAbbreviationDictionary.put("NV", "Nevada");
+        stateAbbreviationDictionary.put("NH", "New Hampshire");
+        stateAbbreviationDictionary.put("NJ", "New Jersey");
+        stateAbbreviationDictionary.put("NM", "New Mexico");
+        stateAbbreviationDictionary.put("NY", "New York");
+        stateAbbreviationDictionary.put("NC", "North Carolina");
+        stateAbbreviationDictionary.put("ND", "North Dakota");
+        stateAbbreviationDictionary.put("OH", "Ohio");
+        stateAbbreviationDictionary.put("OK", "Oklahoma");
+        stateAbbreviationDictionary.put("OR", "Oregon");
+        stateAbbreviationDictionary.put("PA", "Pennsylvania");
+        stateAbbreviationDictionary.put("RI", "Rhode Island");
+        stateAbbreviationDictionary.put("SC", "South Carolina");
+        stateAbbreviationDictionary.put("SD", "South Dakota");
+        stateAbbreviationDictionary.put("TN", "Tennessee");
+        stateAbbreviationDictionary.put("TX", "Texas");
+        stateAbbreviationDictionary.put("UT", "Utah");
+        stateAbbreviationDictionary.put("VT", "Vermont");
+        stateAbbreviationDictionary.put("VA", "Virginia");
+        stateAbbreviationDictionary.put("WA", "Washington");
+        stateAbbreviationDictionary.put("WV", "West Virginia");
+        stateAbbreviationDictionary.put("WI", "Wisconsin");
+        stateAbbreviationDictionary.put("WY", "Wyoming"); }
+
+
     public static boolean isValidEmailAddress(String email) {
 
         String ePattern = "^[^.][a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
-        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
-        java.util.regex.Matcher m = p.matcher(email);
+        Pattern p = Pattern.compile(ePattern);
+        Matcher m = p.matcher(email);
         return m.matches();
     }
 
@@ -66,5 +123,23 @@ public class UsefulMethods {
         }
         return textValues;
     }
-
+//    public static String getPopulatedInfo(List<WebElement> string, int size) throws InterruptedException {
+//        String populatedInfo = "";
+//        List<String> allInfo = UsefulMethods.getTextFromWebElements(string);
+//        for (int i = 1; allInfo.size() < size; i++) {
+//            if (!allInfo.get(i).isEmpty()) {
+//                populatedInfo +=" "+ allInfo.get(i);
+//            }
+//        }
+//        return populatedInfo;
+//    }
+//public static List<String> getAttributeFromWebElements(List<WebElement> elements) throws InterruptedException {
+//    List<String> attributeValues = new ArrayList<>();
+//    for (WebElement element : elements) {
+//        if (!element.getAttribute("value").isEmpty()) {
+//            attributeValues.add(element.getAttribute("value"));
+//        }
+//    }
+//    return attributeValues;
+//}
 }

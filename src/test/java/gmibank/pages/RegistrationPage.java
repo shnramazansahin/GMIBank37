@@ -1,12 +1,8 @@
 package gmibank.pages;
 
-import gmibank.utilities.Driver;
-import org.kohsuke.rngom.parse.host.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RegistrationPage extends BasePage {
@@ -61,6 +57,13 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(xpath = "//strong[contains(text(),'Registration saved!')]")
     public WebElement successMessage;
+
+    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    public WebElement firstbutton;
+    public void navigateRegister() {
+        firstbutton.click();
+        registrationButton.click();
+    }
 
 
 

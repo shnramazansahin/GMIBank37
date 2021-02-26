@@ -11,8 +11,6 @@ import gmibank.utilities.UsefulMethods;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class RegistrationStepDef {

@@ -17,6 +17,13 @@ public class SingedInPage {
     @FindBy(xpath="(//span)[21]")
     public WebElement userInfo;
 
+    @FindBy(xpath="//span[contains(.,'My Operations')]")
+    public WebElement myOppertaion;
+
+    @FindBy(xpath="//span[contains(.,'Manage Accounts')]")
+    public WebElement manageAccounts;
+
+
 
 
 }

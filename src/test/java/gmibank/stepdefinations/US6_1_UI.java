@@ -6,6 +6,7 @@ import gmibank.pages.*;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
 import gmibank.utilities.ExcelUtil;
+import gmibank.utilities.WriteToTxt;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -44,7 +45,8 @@ public class US6_1_UI {
 
     @When("user clicks on the user name {string}")
     public void user_clicks_on_the_user_name(String string) {
-        singedInPage.userNameButton.click();
+        Driver.waitAndClick(singedInPage.userNameButton,2);
+
     }
 
     @When("clicks team name {string} button")
@@ -79,40 +81,6 @@ public class US6_1_UI {
         String language= userSettingPage.language.getText();
         Assert.assertTrue(language.contains("Dil"));
     }
-
-    @When("user verifys options {string} in English")
-    public void user_verifys_options_in_English(String string) {
-        Driver.wait(2);
-
-        /*
-        how to verify and compare the populated info:
-            use excel --> could not write a dynamic code
-            use configreader--> not dynamic
-            write a scenario outline--> did not make sense much
-            HOW ?????
-         */
-
-        WebElement firstName =userSettingPage.firstnameTexbox;
-        Assert.assertTrue(firstName.isDisplayed());
-
-        WebElement lastname =userSettingPage.lastnameTexBox;
-        Assert.assertTrue(lastname.isDisplayed());
-
-        WebElement email= userSettingPage.emailBox  ;
-        Assert.assertTrue(email.isDisplayed());
-
-        WebElement language= userSettingPage.languageOpt;
-        Assert.assertTrue(language.isDisplayed());
-
-        Select select = new Select(userSettingPage.languageOpt);
-
-        List<WebElement> languageOpt= select.getOptions();
-       Assert.assertTrue(languageOpt.contains("English"));
-       Assert.assertTrue(languageOpt.contains("Turkish")); // fail
-
-    }
-
-
     @When("user update the firstname {string}")
     public void user_update_the_firstname(String string) {
         userSettingPage.firstnameTexbox.clear();
@@ -120,7 +88,7 @@ public class US6_1_UI {
     }
     @When("user update the lastname {string}")
     public void user_update_the_lastname(String string) {
-            userSettingPage.lastnameTexBox.clear();
+        userSettingPage.lastnameTexBox.clear();
         userSettingPage.lastnameTexBox.sendKeys(string);
     }
 
@@ -134,6 +102,31 @@ public class US6_1_UI {
     public void user_clicks_on_the_save_button(String string) {
         userSettingPage.saveButton.click();
     }
+
+    @When("user verifys options populated info in English")
+    public void user_verifys_options_populated_info_in_English() {
+        String  first =userSettingPage.firstnameTexbox.getAttribute("value");
+        Assert.assertFalse(first.isEmpty());
+
+        String lastname =userSettingPage.lastname.getText();
+        Assert.assertFalse(lastname.isEmpty());
+
+        String email= userSettingPage.emailBox.getAttribute("value");
+        Assert.assertFalse(email.isEmpty());
+
+        String language= userSettingPage.languageOpt.getAttribute("value");
+        Assert.assertFalse(language.isEmpty());
+
+
+
+
+
+
+
+    }
+
+
+
 
     @Then("user closes the applicaiton")
     public void user_closes_the_applicaiton() {

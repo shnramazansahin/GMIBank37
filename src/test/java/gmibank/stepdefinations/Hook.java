@@ -8,21 +8,21 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hook {
 
-    @Before(order = 2)
-    public void setup() {
-        System.out.println("Test setup");
-        Driver.getDriver().manage().window().maximize();
-    }
+//    @Before(order = 2)
+//    public void setup() {
+//        System.out.println("Test setup");
+//        Driver.getDriver().manage().window().maximize();
+//    }
 
     @Before(value = "@driver", order = 1)
     public void specialSetup() {
         System.out.println("Setup for driver only");
     }
 
-    @After("@driver")
-    public void specialTearDown() {
-        System.out.println("Tear down for driver only");
-    }
+//    @After("@driver")
+//    public void specialTearDown() {
+//        System.out.println("Tear down for driver only");
+//    }
 
     @After
     public void tearDown(Scenario scenario) {

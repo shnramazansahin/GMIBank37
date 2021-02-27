@@ -3,25 +3,14 @@
     "line": 2,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 666999,
-              "status": "skipped"
-            },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 54,
+        "line": 74,
         "name": "userinfo should not be editable with invalid credentials",
         "description": "",
         "id": "userinfo-segment;userinfo-should-not-be-editable-with-invalid-credentials;;2",
         "after": [
           {
             "result": {
-              "duration": 4200,
+              "duration": 9400,
               "status": "skipped"
             },
             "match": {
@@ -34,10 +23,10 @@
         "steps": [
           {
             "result": {
-              "duration": 54101,
+              "duration": 664600,
               "status": "skipped"
             },
-            "line": 44,
+            "line": 61,
             "name": "user  on the login page",
             "match": {
               "location": "US6_1_UI.user_on_the_login_page()"
@@ -46,15 +35,15 @@
           },
           {
             "result": {
-              "duration": 12600,
+              "duration": 14500,
               "status": "skipped"
             },
-            "line": 45,
-            "name": "user enters valid username \"\u003cusername\u003e\"",
+            "line": 62,
+            "name": "user enters valid username \"wallstreetbets\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"\u003cusername\u003e\"",
+                  "val": "\"wallstreetbets\"",
                   "offset": 27
                 }
               ],
@@ -64,15 +53,15 @@
           },
           {
             "result": {
-              "duration": 9800,
+              "duration": 9700,
               "status": "skipped"
             },
-            "line": 46,
-            "name": "user enter valid password \"\u003cpassword\u003e\"",
+            "line": 63,
+            "name": "user enter valid password \"1234As$\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"\u003cpassword\u003e\"",
+                  "val": "\"1234As$\"",
                   "offset": 26
                 }
               ],
@@ -82,10 +71,10 @@
           },
           {
             "result": {
-              "duration": 8301,
+              "duration": 8300,
               "status": "skipped"
             },
-            "line": 47,
+            "line": 64,
             "name": "user clicks on the Sign In button",
             "match": {
               "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
@@ -94,10 +83,10 @@
           },
           {
             "result": {
-              "duration": 8199,
+              "duration": 8200,
               "status": "skipped"
             },
-            "line": 48,
+            "line": 65,
             "name": "user clicks on the user name \"team 37\"",
             "match": {
               "arguments": [
@@ -112,15 +101,15 @@
           },
           {
             "result": {
-              "duration": 7801,
+              "duration": 7500,
               "status": "skipped"
             },
-            "line": 49,
-            "name": "clicks team name \"userinfo\" button",
+            "line": 66,
+            "name": "clicks team name \"password\" button",
             "match": {
               "arguments": [
                 {
-                  "val": "\"userinfo\"",
+                  "val": "\"password\"",
                   "offset": 17
                 }
               ],
@@ -130,24 +119,48 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 5900,
+              "status": "skipped"
             },
-            "line": 50,
-            "name": "user update the email with invalid email \"new@gmail.com\"",
-            "match": {},
+            "line": 67,
+            "name": "user enters current  \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 21
+                }
+              ],
+              "location": "US8.user_enters_current(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 6800,
+              "duration": 4800,
               "status": "skipped"
             },
-            "line": 51,
-            "name": "user validates the error message",
+            "line": 68,
+            "name": "user enters new password \"1234As$\" and retype the new password",
             "match": {
-              "location": "US5_UI.user_validates_the_error_message()"
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 25
+                }
+              ],
+              "location": "US8.user_enters_new_password_and_retype_the_new_password(String)"
             },
-            "keyword": "Then "
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 70,
+            "name": "user clicks on the save button",
+            "match": {},
+            "keyword": "When "
           }
         ],
         "tags": [
@@ -155,7 +168,347 @@
             "name": "@Us6"
           },
           {
-            "name": "@Negative"
+            "name": "@Password"
+          }
+        ]
+      },
+      {
+        "line": 75,
+        "name": "userinfo should not be editable with invalid credentials",
+        "description": "",
+        "id": "userinfo-segment;userinfo-should-not-be-editable-with-invalid-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 5100,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 18900,
+              "status": "skipped"
+            },
+            "line": 61,
+            "name": "user  on the login page",
+            "match": {
+              "location": "US6_1_UI.user_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10900,
+              "status": "skipped"
+            },
+            "line": 62,
+            "name": "user enters valid username \"wallstreetbets\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"wallstreetbets\"",
+                  "offset": 27
+                }
+              ],
+              "location": "US6_1_UI.user_enters_valid_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12600,
+              "status": "skipped"
+            },
+            "line": 63,
+            "name": "user enter valid password \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 26
+                }
+              ],
+              "location": "US6_1_UI.user_enter_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6100,
+              "status": "skipped"
+            },
+            "line": 64,
+            "name": "user clicks on the Sign In button",
+            "match": {
+              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20600,
+              "status": "skipped"
+            },
+            "line": 65,
+            "name": "user clicks on the user name \"team 37\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"team 37\"",
+                  "offset": 29
+                }
+              ],
+              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6300,
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "clicks team name \"password\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password\"",
+                  "offset": 17
+                }
+              ],
+              "location": "US6_1_UI.clicks_team_name_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5100,
+              "status": "skipped"
+            },
+            "line": 67,
+            "name": "user enters current  \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 21
+                }
+              ],
+              "location": "US8.user_enters_current(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5800,
+              "status": "skipped"
+            },
+            "line": 68,
+            "name": "user enters new password \"1234As$\" and retype the new password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 25
+                }
+              ],
+              "location": "US8.user_enters_new_password_and_retype_the_new_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 70,
+            "name": "user clicks on the save button",
+            "match": {},
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us6"
+          },
+          {
+            "name": "@Password"
+          }
+        ]
+      },
+      {
+        "line": 76,
+        "name": "userinfo should not be editable with invalid credentials",
+        "description": "",
+        "id": "userinfo-segment;userinfo-should-not-be-editable-with-invalid-credentials;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 6600,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 18500,
+              "status": "skipped"
+            },
+            "line": 61,
+            "name": "user  on the login page",
+            "match": {
+              "location": "US6_1_UI.user_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10400,
+              "status": "skipped"
+            },
+            "line": 62,
+            "name": "user enters valid username \"wallstreetbets\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"wallstreetbets\"",
+                  "offset": 27
+                }
+              ],
+              "location": "US6_1_UI.user_enters_valid_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8300,
+              "status": "skipped"
+            },
+            "line": 63,
+            "name": "user enter valid password \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 26
+                }
+              ],
+              "location": "US6_1_UI.user_enter_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8200,
+              "status": "skipped"
+            },
+            "line": 64,
+            "name": "user clicks on the Sign In button",
+            "match": {
+              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7400,
+              "status": "skipped"
+            },
+            "line": 65,
+            "name": "user clicks on the user name \"team 37\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"team 37\"",
+                  "offset": 29
+                }
+              ],
+              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19900,
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "clicks team name \"password\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password\"",
+                  "offset": 17
+                }
+              ],
+              "location": "US6_1_UI.clicks_team_name_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12600,
+              "status": "skipped"
+            },
+            "line": 67,
+            "name": "user enters current  \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 21
+                }
+              ],
+              "location": "US8.user_enters_current(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8600,
+              "status": "skipped"
+            },
+            "line": 68,
+            "name": "user enters new password \"1234As$\" and retype the new password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
+                  "offset": 25
+                }
+              ],
+              "location": "US8.user_enters_new_password_and_retype_the_new_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 70,
+            "name": "user clicks on the save button",
+            "match": {},
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us6"
+          },
+          {
+            "name": "@Password"
           }
         ]
       }

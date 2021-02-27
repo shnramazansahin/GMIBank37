@@ -38,8 +38,9 @@ public class UserSettingPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveButton;
 
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement invalidMessage;
 
-    //button[@type='submit']
 
 
 }

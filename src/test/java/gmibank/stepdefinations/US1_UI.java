@@ -22,7 +22,7 @@ public class US1_UI {
 
     }
 
-    @When("user enters a name{string}")
+    @When("user enters a name {string}")
     public void user_enters_a_name(String string) {
         registrationPage.firstname.sendKeys(string);
     }

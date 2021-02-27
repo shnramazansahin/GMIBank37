@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import gmibank.pages.LoginPage;
 import gmibank.pages.MainPage;
 import gmibank.pages.RegistrationPage;
+import gmibank.pages.UserSettingPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
 import org.junit.Assert;
@@ -15,6 +16,7 @@ import java.util.Set;
 public class US5_UI {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
+    UserSettingPage userSettingPage=new UserSettingPage();
     RegistrationPage registrationPage= new RegistrationPage();
     @Given("user  on the {string}")
     public void user_on_the(String string) {
@@ -46,9 +48,6 @@ public class US5_UI {
 
         Thread.sleep(2000);
         Assert.assertTrue(alertText.contains("Failed to sign in"));
-
-
-
 
     }
 

@@ -1,6 +1,7 @@
 package gmibank.pages;
 
 import gmibank.utilities.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,7 +11,7 @@ public class RegistrationPage {
 
 
 
-    @FindBy(linkText="Register")
+    @FindBy(xpath = "//a[@href='/account/register']")
     public WebElement registrationButton;
 
     @FindBy(xpath = "//div[@class='invalid-feedback']")
@@ -61,12 +62,18 @@ public class RegistrationPage {
     @FindBy(xpath = "//strong[contains(text(),'Registration saved!')]")
     public WebElement successMessage;
 
-    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    @FindBy(id ="account-menu")
     public WebElement firstbutton;
 
     public void navigateRegister(){
-        Driver.waitForVisibility(firstbutton,5);
-        Driver.waitAndClick(firstbutton,5);
+
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", firstbutton);
+
+
+       // Driver.waitForVisibility(firstbutton,3);
+       // Driver.waitAndClick(firstbutton,3);
+
         registrationButton.click();
 
     }

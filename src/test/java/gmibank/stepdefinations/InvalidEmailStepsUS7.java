@@ -21,15 +21,15 @@ public class InvalidEmailStepsUS7 {
     @Given("user navigate to {string}")
     public void user_navigate_to(String string) {
         Driver.getDriver().get(string);
-
     }
 
     @Then("click register")
-    public void click_register() {
+    public void click_register() throws InterruptedException {
+
+
         register.navigateRegister();
-
+        
     }
-
 
     @When("user enter the {string} see {string}")
     public void userEnterTheSee(String arg0, String ExpectedMessage) {

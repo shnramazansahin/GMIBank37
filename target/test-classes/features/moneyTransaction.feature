@@ -19,7 +19,7 @@ Feature: Money Transaction feature
     Then System should display succes message as ""
     Examples:
       | From | To | Balance | Description |
-      | From | To | Balance | Description |
+      | checking account for t37customer | investment account for t37customer | 3000 | 3000$ transfered between checking and investment accounts |
 
 
 

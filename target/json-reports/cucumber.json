@@ -11,8 +11,8 @@
         "steps": [
           {
             "result": {
-              "duration": 27600,
-              "status": "skipped"
+              "duration": 6262002553,
+              "status": "passed"
             },
             "line": 7,
             "name": "User goes to login page",
@@ -23,11 +23,14 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1307511838,
+              "status": "passed"
             },
             "line": 8,
             "name": "User logs in as a customer",
-            "match": {},
+            "match": {
+              "location": "MoneyTransactionStepDef.user_logs_in_as_a_customer()"
+            },
             "keyword": "Then "
           }
         ]
@@ -36,8 +39,8 @@
         "before": [
           {
             "result": {
-              "duration": 293489,
-              "status": "skipped"
+              "duration": 15440715922,
+              "status": "passed"
             },
             "match": {
               "location": "Hooks.setup()"
@@ -51,8 +54,8 @@
         "after": [
           {
             "result": {
-              "duration": 4428,
-              "status": "skipped"
+              "duration": 81725,
+              "status": "passed"
             },
             "match": {
               "location": "Hooks.tearDown()"
@@ -64,8 +67,8 @@
         "steps": [
           {
             "result": {
-              "duration": 7025,
-              "status": "skipped"
+              "duration": 348301712,
+              "status": "passed"
             },
             "line": 12,
             "name": "User clicks on my operations",
@@ -76,65 +79,116 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 65890221,
+              "status": "passed"
             },
             "line": 13,
             "name": "User navigates to money transfer button",
-            "match": {},
+            "match": {
+              "location": "MoneyTransactionStepDef.user_navigates_to_money_transfer_button()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 5141810673,
+              "status": "passed"
             },
             "line": 14,
-            "name": "User selects an account from account dropdown \"From\"",
-            "match": {},
+            "name": "User selects an account from account dropdown \"checking account for t37customer\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"checking account for t37customer\"",
+                  "offset": 46
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_selects_an_account_from_account_dropdown(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 5086243147,
+              "status": "passed"
             },
             "line": 15,
-            "name": "User selects an account to account dropdown \"To\"",
-            "match": {},
+            "name": "User selects an account to account dropdown \"investment account for t37customer\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"investment account for t37customer\"",
+                  "offset": 44
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_selects_an_account_to_account_dropdown(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 139556353,
+              "status": "passed"
             },
             "line": 16,
-            "name": "User enters amount of balance \"Balance\"",
-            "match": {},
+            "name": "User enters amount of balance \"3000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3000\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_enters_amount_of_balance(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 168957913,
+              "status": "passed"
             },
             "line": 17,
-            "name": "User provides a description for transfer \"Description\"",
-            "match": {},
+            "name": "User provides a description for transfer \"3000$ transfered between checking and investment accounts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3000$ transfered between checking and investment accounts\"",
+                  "offset": 41
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_provides_a_description_for_transfer(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 61754577,
+              "status": "passed"
             },
             "line": 18,
             "name": "User clicks on make transfer button",
-            "match": {},
+            "match": {
+              "location": "MoneyTransactionStepDef.user_clicks_on_make_transfer_button()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 83302,
+              "status": "passed"
             },
             "line": 19,
             "name": "System should display succes message as \"\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "MoneyTransactionStepDef.system_should_display_succes_message_as(String)"
+            },
             "keyword": "Then "
           }
         ],

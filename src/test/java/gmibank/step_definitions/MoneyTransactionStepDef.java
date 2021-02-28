@@ -2,9 +2,7 @@ package gmibank.step_definitions;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gmibank.pages.BasePage;
-import gmibank.pages.LoginPage;
-import gmibank.pages.MoneyTransactionPage;
+import gmibank.pages.*;
 import gmibank.utilities.BrowserUtils;
 import gmibank.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +12,8 @@ public class MoneyTransactionStepDef extends BasePage {
 
     LoginPage loginPage=new LoginPage();
     MoneyTransactionPage moneyTransactionPage=new MoneyTransactionPage();
+    CustomerPage customerPage=new CustomerPage();
+    AccountCreationPage accountCreationPage=new AccountCreationPage();
 
 
 
@@ -46,6 +46,7 @@ public class MoneyTransactionStepDef extends BasePage {
     public void user_enters_amount_of_balance(String balance) {
 
        Driver.waitAndSendText(moneyTransactionPage.balanceField,balance,3);
+       moneyTransactionPage.balanCentField.sendKeys("0");
     }
 
     @When("User provides a description for transfer {string}")

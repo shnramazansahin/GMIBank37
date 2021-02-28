@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0.002505">
-    <testcase classname="Money Transaction feature" name="Money transfer should be available" time="0.002505">
-        <skipped><![CDATA[Given User goes to login page...............................................skipped
-Then User logs in as a customer.............................................undefined
-When User clicks on my operations...........................................skipped
-And User navigates to money transfer button.................................undefined
-And User selects an account from account dropdown "From"....................undefined
-And User selects an account to account dropdown "To"........................undefined
-And User enters amount of balance "Balance".................................undefined
-And User provides a description for transfer "Description"..................undefined
-And User clicks on make transfer button.....................................undefined
-Then System should display succes message as "".............................undefined
-]]></skipped>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="34.025139">
+    <testcase classname="Money Transaction feature" name="Money transfer should be available" time="34.025139">
+        <system-out><![CDATA[Given User goes to login page...............................................passed
+Then User logs in as a customer.............................................passed
+When User clicks on my operations...........................................passed
+And User navigates to money transfer button.................................passed
+And User selects an account from account dropdown "checking account for t37customer".passed
+And User selects an account to account dropdown "investment account for t37customer".passed
+And User enters amount of balance "3000"....................................passed
+And User provides a description for transfer "3000$ transfered between checking and investment accounts".passed
+And User clicks on make transfer button.....................................passed
+Then System should display succes message as "".............................passed
+]]></system-out>
     </testcase>
 </testsuite>

@@ -61,10 +61,10 @@ formatter.examples({
     },
     {
       "cells": [
-        "From",
-        "To",
-        "Balance",
-        "Description"
+        "checking account for t37customer",
+        "investment account for t37customer",
+        "3000",
+        "3000$ transfered between checking and investment accounts"
       ]
     }
   ]
@@ -75,7 +75,7 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.before({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User goes to login page",
@@ -85,15 +85,17 @@ formatter.match({
   "location": "LoginPageStepDef.user_goes_to_login_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User logs in as a customer",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_logs_in_as_a_customer()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "Money transfer should be available",
@@ -113,65 +115,79 @@ formatter.match({
   "location": "AccountCreationStepDef.user_clicks_on_my_operations()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User navigates to money transfer button",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_navigates_to_money_transfer_button()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User selects an account from account dropdown \"From\"",
+  "name": "User selects an account from account dropdown \"checking account for t37customer\"",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_selects_an_account_from_account_dropdown(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User selects an account to account dropdown \"To\"",
+  "name": "User selects an account to account dropdown \"investment account for t37customer\"",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_selects_an_account_to_account_dropdown(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User enters amount of balance \"Balance\"",
+  "name": "User enters amount of balance \"3000\"",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_enters_amount_of_balance(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User provides a description for transfer \"Description\"",
+  "name": "User provides a description for transfer \"3000$ transfered between checking and investment accounts\"",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_provides_a_description_for_transfer(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "User clicks on make transfer button",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.user_clicks_on_make_transfer_button()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "System should display succes message as \"\"",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "MoneyTransactionStepDef.system_should_display_succes_message_as(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
-  "status": "skipped"
+  "status": "passed"
 });
 });

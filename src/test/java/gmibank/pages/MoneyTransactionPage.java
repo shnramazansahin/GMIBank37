@@ -3,9 +3,9 @@ package gmibank.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MoneyTransactionPage {
+public class MoneyTransactionPage extends BasePage {
 
-    @FindBy(xpath = "//a[contains(text(),'Transfer Money')]")
+    @FindBy(linkText = "Transfer Money")
     public WebElement moneyTransfer;
 
     @FindBy(id="fromAccountId")
@@ -18,9 +18,9 @@ public class MoneyTransactionPage {
     public WebElement balanceField;
 
     @FindBy(id="balancecent")
-    public WebElement balancecentField;
+    public WebElement balanCentField;
 
-    @FindBy(name="description")
+    @FindBy(id="description")
     public WebElement descriptionField;
 
     @FindBy(id="make-transfer")

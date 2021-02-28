@@ -160,15 +160,10 @@ public class CustomerPageStepDef {
 
         todaysDate=DateUtil.todaysDate5();
         System.out.println("todaysDate = " + todaysDate);
-        BrowserUtils.setAttribute(customerPage.createDate,"Create Date",todaysDate);
-        System.out.println(customerPage.createDate.getText());
-
-  //      Driver.waitAndSendText(customerPage.createDate,todaysDate,3);
-//        String creationDate=customerPage.createDate.getAttribute("value");
-//        System.out.println("creationDatefirst = " + creationDate);
-//        creationDate=creationDate.replace(creationDate.charAt(10),' ');
-//        System.out.println("creationDate = " + creationDate);
-//        Assert.assertEquals(creationDate,todaysDate);
+        String creationDate=customerPage.createDate.getAttribute("value");
+        System.out.println("creationDatefirst = " + creationDate);
+        creationDate=creationDate.replace(creationDate.charAt(10),' ');
+        Assert.assertEquals(creationDate,todaysDate);
 
     }
     @When("User can select a country as {string}")
@@ -204,6 +199,7 @@ public class CustomerPageStepDef {
     }
     @When("User able to check zelle enrolled checkbox")
     public void userAbleToCheckZelleEnrolledCheckbox() {
+
         customerPage.zelleEnrolledCheckButton.isEnabled();
     }
     @When("User clicks on the save button")

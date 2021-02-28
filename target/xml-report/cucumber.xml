@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="34.422957">
-    <testcase classname="Customer creation feature" name="_2" time="34.422957">
-        <system-out><![CDATA[Given User goes to login page...............................................passed
-When user enters a valid username and password..............................passed
-Then User logs in...........................................................passed
-And User navigates to my operations dropdown................................passed
-And User clicks on the manage customers.....................................passed
-And User clicks on create a new customer button.............................passed
-When User creates a date as "Create Date"...................................passed
-]]></system-out>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0.002505">
+    <testcase classname="Money Transaction feature" name="Money transfer should be available" time="0.002505">
+        <skipped><![CDATA[Given User goes to login page...............................................skipped
+Then User logs in as a customer.............................................undefined
+When User clicks on my operations...........................................skipped
+And User navigates to money transfer button.................................undefined
+And User selects an account from account dropdown "From"....................undefined
+And User selects an account to account dropdown "To"........................undefined
+And User enters amount of balance "Balance".................................undefined
+And User provides a description for transfer "Description"..................undefined
+And User clicks on make transfer button.....................................undefined
+Then System should display succes message as "".............................undefined
+]]></skipped>
     </testcase>
 </testsuite>

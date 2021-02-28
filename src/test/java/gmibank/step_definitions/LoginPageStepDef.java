@@ -31,7 +31,6 @@ public class LoginPageStepDef {
     @Then("User logs in")
     public void user_logs_in() {
 
-
     }
 
 }

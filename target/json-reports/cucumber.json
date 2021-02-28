@@ -1,20 +1,20 @@
 [
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
-        "line": 5,
-        "name": "",
+        "line": 6,
+        "name": "Login As customer",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 11220013281,
-              "status": "passed"
+              "duration": 27600,
+              "status": "skipped"
             },
-            "line": 6,
+            "line": 7,
             "name": "User goes to login page",
             "match": {
               "location": "LoginPageStepDef.user_goes_to_login_page()"
@@ -23,63 +23,12 @@
           },
           {
             "result": {
-              "duration": 492321464,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user enters a valid username and password",
-            "match": {
-              "location": "LoginPageStepDef.user_enters_a_valid_username_and_password()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 53200,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
-            "name": "User logs in",
-            "match": {
-              "location": "LoginPageStepDef.user_logs_in()"
-            },
+            "name": "User logs in as a customer",
+            "match": {},
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1103439117,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User navigates to my operations dropdown",
-            "match": {
-              "location": "CustomerPageStepDef.user_navigates_to_my_operations_dropdown()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 82321115,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User clicks on the manage customers",
-            "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_the_manage_customers()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 192846057,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User clicks on create a new customer button",
-            "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_create_a_new_customer_button()"
-            },
-            "keyword": "And "
           }
         ]
       },
@@ -87,23 +36,23 @@
         "before": [
           {
             "result": {
-              "duration": 20764220796,
-              "status": "passed"
+              "duration": 293489,
+              "status": "skipped"
             },
             "match": {
               "location": "Hooks.setup()"
             }
           }
         ],
-        "line": 41,
-        "name": "",
+        "line": 22,
+        "name": "Money transfer should be available",
         "description": "",
-        "id": "customer-creation-feature;",
+        "id": "money-transaction-feature;money-transfer-should-be-available;;2",
         "after": [
           {
             "result": {
-              "duration": 57569,
-              "status": "passed"
+              "duration": 4428,
+              "status": "skipped"
             },
             "match": {
               "location": "Hooks.tearDown()"
@@ -111,45 +60,99 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 566013183,
-              "status": "passed"
+              "duration": 7025,
+              "status": "skipped"
             },
-            "line": 42,
-            "name": "User creates a date as \"Create Date\"",
+            "line": 12,
+            "name": "User clicks on my operations",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Create Date\"",
-                  "offset": 23
-                }
-              ],
-              "location": "CustomerPageStepDef.user_creates_a_date_as(String)"
+              "location": "AccountCreationStepDef.user_clicks_on_my_operations()"
             },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "User navigates to money transfer button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "User selects an account from account dropdown \"From\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "User selects an account to account dropdown \"To\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "User enters amount of balance \"Balance\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "User provides a description for transfer \"Description\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "User clicks on make transfer button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "System should display succes message as \"\"",
+            "match": {},
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Customer"
-          },
-          {
-            "name": "@Date"
+            "name": "@Transaction"
           }
         ]
       }
     ],
-    "name": "Customer creation feature",
-    "description": "    Create a new customer",
-    "id": "customer-creation-feature",
+    "name": "Money Transaction feature",
+    "description": "  As a customer I should be able to make money transfer",
+    "id": "money-transaction-feature",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/CustomerPage.feature",
+    "uri": "src/test/resources/features/moneyTransaction.feature",
     "tags": [
       {
-        "name": "@Customer",
+        "name": "@Transaction",
         "type": "Tag",
         "location": {
           "line": 1,

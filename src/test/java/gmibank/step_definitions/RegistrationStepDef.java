@@ -46,7 +46,7 @@ public class RegistrationStepDef {
 
         ssn=faker.idNumber().ssnValid();
         this.ssn=ssn;
-        registrationPage.ssnTextbox.sendKeys(ssn);
+        Driver.waitAndSendText(registrationPage.ssnTextbox,ssn,3);
         customer.setSsn(ssn);
     }
 
@@ -55,8 +55,7 @@ public class RegistrationStepDef {
 
         firstname=faker.name().firstName();
         this.firstName=firstname;
-
-        registrationPage.firstnameTextbox.sendKeys(firstname);
+        Driver.waitAndSendText(registrationPage.firstnameTextbox,firstname,3);
         customer.setFirstName(firstName);
 
     }
@@ -67,7 +66,7 @@ public class RegistrationStepDef {
 
         lastname=faker.name().lastName();
         this.lastName=lastname;
-        registrationPage.lastnameTextbox.sendKeys(lastname);
+        Driver.waitAndSendText(registrationPage.lastnameTextbox,lastname,3);
         customer.setLastName(lastname);
     }
 
@@ -75,7 +74,7 @@ public class RegistrationStepDef {
     public void user_enter_an_address_with_zip(String address) {
 
         address = faker.address().streetAddress();
-        Driver.waitAndSendText(registrationPage.addressTextbox,address,5);
+        Driver.waitAndSendText(registrationPage.addressTextbox,address,3);
         customer.setAddress(address);
 
     }
@@ -96,8 +95,7 @@ public class RegistrationStepDef {
     public void user_create_a_username_without_digits(String username) {
         username = faker.name().username();
         this.username = username;
-        Driver.waitAndSendText( registrationPage.usernameTextbox,username,5);
-
+        Driver.waitAndSendText( registrationPage.usernameTextbox,username,3);
 
     }
 
@@ -105,8 +103,7 @@ public class RegistrationStepDef {
     public void user_enter_a_email_address(String email) {
 
         email = firstName+lastName+"@gmail.com";
-        Driver.waitAndSendText(registrationPage.emailTextbox,email,5);
-
+        Driver.waitAndSendText(registrationPage.emailTextbox,email,3);
         customer.setEmail(email);
 
     }
@@ -117,7 +114,6 @@ public class RegistrationStepDef {
         password = faker.internet().password(10,15,true,true);
         this.password = password;
         Driver.waitAndSendText( registrationPage.firstPasswordTextbox,password,5);
-
 
     }
 
@@ -143,67 +139,122 @@ public class RegistrationStepDef {
 
 
     }
-//
-//    @Then("verify the invalid feedback")
-//    public void verify_the_invalid_feedback() throws InterruptedException {
-//        boolean verify = true;
-//        List<WebElement> expectedFeedback = registrationPage.fieldList;
-//        int size = UsefulMethods.getTextFromWebElements(expectedFeedback).size();
-//        System.out.println("Size" + size);
-//        verify = size > 0;
-//        Assert.assertTrue(verify);
-//
-//    }
-//
-//    @When("User enters invalid as ssn {string}")
-//    public void userEntersInvalidAsSsn(String ssn) throws InterruptedException {
-//
-//        Thread.sleep(2000);
-//        registrationPage.ssnTextbox.sendKeys(ssn);
-//        Thread.sleep(2000);
-//        registrationPage.registerSubmitButton.click();
-//        Assert.assertFalse(UsefulMethods.isValidSSN(ssn));
-//
-//    }
-//
-//    @Then("System should display {string}")
-//    public void system_should_display(String string) {
-//
-//        Assert.assertEquals(string, Driver.waitAndGetText(registrationPage.invalidSSnWarningMessage, 3));
-//        System.out.println(registrationPage.invalidSSnWarningMessage);
-//
-//    }
-//
-//    @When("User enter invalid mobile {string}")
-//    public void userEnterInvalidMobile(String mobilePhone) {
-//
-//        registrationPage.mobilephoneTextbox.sendKeys(mobilePhone);
-//        registrationPage.registerSubmitButton.click();
-//        Assert.assertFalse(UsefulMethods.isValidPhoneNumber(mobilePhone));
-//
-//    }
-//
-//    @Then("System should display this message {string}")
-//    public void systemShouldDisplayThisMessage(String arg0) {
-//
-//        Assert.assertEquals(arg0, Driver.waitAndGetText(registrationPage.invalidPhoneNumberWarningMessage, 3));
-//        System.out.println(registrationPage.invalidPhoneNumberWarningMessage);
-//    }
-//
-//
-//    @When("User enters invalid {string}")
-//    public void userEntersInvalid(String email) {
-//        registrationPage.emailTextbox.sendKeys(email);
-//        registrationPage.registerSubmitButton.click();
-//        Assert.assertFalse(UsefulMethods.isValidEmailAddress(email));
-//    }
-//
-//    @Then("System should display email message {string}")
-//    public void systemShouldDisplayEmailMessage(String arg0) {
-//
-//        Assert.assertEquals(arg0, Driver.waitAndGetText(registrationPage.invalidEmailWarningmessage, 1));
-//        System.out.println(registrationPage.invalidEmailWarningmessage);
-//    }
+    @Given("User enters SSN {string}")
+    public void userEntersSSN(String ssn) {
+
+        Driver.waitAndSendText(registrationPage.ssnTextbox,ssn,3);
+
+    }
+
+    @When("User enters a name as {string}")
+    public void userEntersANameAs(String firstname) {
+
+        Driver.waitAndSendText(registrationPage.firstnameTextbox,firstname,3);
+    }
+
+    @When("User enter a lastname as {string}")
+    public void userEnterALastnameAs(String lastname) {
+        Driver.waitAndSendText(registrationPage.lastnameTextbox,lastname,3);
+    }
+
+    @When("User enter an address {string} with zip")
+
+    public void userEnterAnAddressWithZip(String address) {
+
+        Driver.waitAndSendText(registrationPage.addressTextbox,address,5);
+    }
+
+    @When("User enter a {int} digits phone {string} number")
+    public void userEnterADigitsPhoneNumber(int arg0, String phoneNumber) {
+
+        Driver.waitAndSendText( registrationPage.mobilephoneTextbox,phoneNumber,5);
+    }
+
+    @When("User create a username {string} without digits")
+    public void userCreateAUsernameWithoutDigits(String username) {
+
+        Driver.waitAndSendText( registrationPage.usernameTextbox,username,5);
+    }
+
+    @When("User enter a email {string} address")
+    public void userEnterAEmailAddress(String email) {
+
+        Driver.waitAndSendText(registrationPage.emailTextbox,email,3);
+    }
+
+    @When("User enter a valid password {string}")
+    public void userEnterAValidPassword(String password) {
+
+        Driver.waitAndSendText( registrationPage.firstPasswordTextbox,password,5);
+    }
+
+    @When("User reenter the {string}")
+    public void userReenterThe(String repeatPassword ) {
+
+        Driver.waitAndSendText(registrationPage.newPasswordTextbox,repeatPassword,3);
+    }
+
+    @Then("verify the invalid feedback")
+    public void verify_the_invalid_feedback() throws InterruptedException {
+        boolean verify = true;
+        List<WebElement> expectedFeedback = registrationPage.fieldList;
+        int size = UsefulMethods.getTextFromWebElements(expectedFeedback).size();
+        System.out.println("Size" + size);
+        verify = size > 0;
+        Assert.assertTrue(verify);
+
+    }
+
+    @When("User enters invalid as ssn {string}")
+    public void userEntersInvalidAsSsn(String ssn) throws InterruptedException {
+
+        Thread.sleep(2000);
+        registrationPage.ssnTextbox.sendKeys(ssn);
+        Thread.sleep(2000);
+        registrationPage.registerSubmitButton.click();
+        Assert.assertFalse(UsefulMethods.isValidSSN(ssn));
+
+    }
+
+    @Then("System should display {string}")
+    public void system_should_display(String string) {
+
+        Assert.assertEquals(string, Driver.waitAndGetText(registrationPage.invalidSSnWarningMessage, 3));
+        System.out.println(registrationPage.invalidSSnWarningMessage);
+
+    }
+
+    @When("User enter invalid mobile {string}")
+    public void userEnterInvalidMobile(String mobilePhone) {
+
+        registrationPage.mobilephoneTextbox.sendKeys(mobilePhone);
+        registrationPage.registerSubmitButton.click();
+        Assert.assertFalse(UsefulMethods.isValidPhoneNumber(mobilePhone));
+
+    }
+
+    @Then("System should display this message {string}")
+    public void systemShouldDisplayThisMessage(String arg0) {
+
+        Assert.assertEquals(arg0, Driver.waitAndGetText(registrationPage.invalidPhoneNumberWarningMessage, 3));
+        System.out.println(registrationPage.invalidPhoneNumberWarningMessage);
+    }
+
+
+    @When("User enters invalid {string}")
+    public void userEntersInvalid(String email) {
+        registrationPage.emailTextbox.sendKeys(email);
+        registrationPage.registerSubmitButton.click();
+        Assert.assertFalse(UsefulMethods.isValidEmailAddress(email));
+    }
+
+    @Then("System should display email message {string}")
+    public void systemShouldDisplayEmailMessage(String arg0) {
+
+        Assert.assertEquals(arg0, Driver.waitAndGetText(registrationPage.invalidEmailWarningmessage, 1));
+        System.out.println(registrationPage.invalidEmailWarningmessage);
+    }
+
 
 
 }

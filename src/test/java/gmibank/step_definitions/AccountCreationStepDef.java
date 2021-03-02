@@ -7,6 +7,7 @@ import gmibank.pages.LoginPage;
 import gmibank.utilities.BrowserUtils;
 import gmibank.utilities.DateUtil;
 import gmibank.utilities.Driver;
+import org.openqa.selenium.Keys;
 
 public class AccountCreationStepDef {
 
@@ -17,7 +18,7 @@ public class AccountCreationStepDef {
     @When("User clicks on my operations")
     public void user_clicks_on_my_operations() {
 
-        Driver.waitAndClick(accountCreationPage.myOppertaion,3);
+        Driver.waitAndClick(accountCreationPage.myOperation,3);
 
     }
 
@@ -60,10 +61,17 @@ public class AccountCreationStepDef {
 
     @When("User  choose a valid date")
     public void user_choose_a_valid_date() {
+
         String todaysDate=DateUtil.todaysDate5();
-        accountCreationPage.createDate.clear();
-        BrowserUtils.setAttribute(accountCreationPage.createDate,"createDate",todaysDate);
-        System.out.println(accountCreationPage.createDate.getAttribute("value"));
+        String month=todaysDate.substring(0,2);
+        String day=todaysDate.substring(3,5);
+        String year=todaysDate.substring(6,10);
+        String hour=todaysDate.substring(11,13);
+        String minute=todaysDate.substring(14,16);
+        String amPm=todaysDate.substring(17);
+
+        accountCreationPage.createDate.sendKeys(month,day,year, Keys.TAB,hour,minute,amPm);
+
     }
 
     @Then("User saves the account")

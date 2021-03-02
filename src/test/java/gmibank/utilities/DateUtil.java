@@ -30,7 +30,7 @@ public class DateUtil {
         return today;
     }
     public static String todaysDate5(){
-        String today = new SimpleDateFormat("yyyy-MM-dd hh:mm").format(new Date());
+        String today = new SimpleDateFormat("MM-dd-yyyy hh:mm a").format(new Date());
         return today;
     }
 }

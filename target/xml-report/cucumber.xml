@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="34.025139">
-    <testcase classname="Money Transaction feature" name="Money transfer should be available" time="34.025139">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="25.872185">
+    <testcase classname="Customer creation feature" name="State should be provided as US state and cannot be blank" time="12.198443">
         <system-out><![CDATA[Given User goes to login page...............................................passed
-Then User logs in as a customer.............................................passed
-When User clicks on my operations...........................................passed
-And User navigates to money transfer button.................................passed
-And User selects an account from account dropdown "checking account for t37customer".passed
-And User selects an account to account dropdown "investment account for t37customer".passed
-And User enters amount of balance "3000"....................................passed
-And User provides a description for transfer "3000$ transfered between checking and investment accounts".passed
-And User clicks on make transfer button.....................................passed
-Then System should display succes message as "".............................passed
+When user enters a valid username and password..............................passed
+Then User logs in...........................................................passed
+And User navigates to my operations dropdown................................passed
+And User clicks on the manage customers.....................................passed
+And User clicks on create a new customer button.............................passed
+When User enters as a state as "" in US.....................................passed
+And User clicks on the save button..........................................passed
+Then System should display warning message for  requirement.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Customer creation feature" name="State should be provided as US state and cannot be blank 2" time="13.673742">
+        <system-out><![CDATA[Given User goes to login page...............................................passed
+When user enters a valid username and password..............................passed
+Then User logs in...........................................................passed
+And User navigates to my operations dropdown................................passed
+And User clicks on the manage customers.....................................passed
+And User clicks on create a new customer button.............................passed
+When User enters as a state as "Endulus" in US..............................passed
+And User clicks on the save button..........................................passed
+Then System should display warning message for  requirement.................passed
 ]]></system-out>
     </testcase>
 </testsuite>

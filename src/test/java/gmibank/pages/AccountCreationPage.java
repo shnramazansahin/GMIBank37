@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class AccountCreationPage extends BasePage {
 
     @FindBy(xpath="//span[contains(.,'My Operations')]")
-    public WebElement myOppertaion;
+    public WebElement myOperation;
 
     @FindBy(xpath="//span[contains(.,'Manage Accounts')]")
     public WebElement manageAccounts;
@@ -26,7 +26,7 @@ public class AccountCreationPage extends BasePage {
     @FindBy(xpath="//select[@name='accountStatusType']")
     public WebElement accountStatus;
 
-    @FindBy(xpath="//input[@name='createDate']")
+    @FindBy(xpath="//input[@name='createDate']/following::input")
     public WebElement  createDate;
 
     @FindBy(xpath="//input[@name='closedDate']")

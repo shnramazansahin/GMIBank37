@@ -36,6 +36,6 @@ public class Hooks {
 //            scenario.embed(image, "image/png", scenario.getName());
 //        }
         System.out.println("Test clean up");
-        //Driver.closeDriver();
+        Driver.closeDriver();
     }
 }

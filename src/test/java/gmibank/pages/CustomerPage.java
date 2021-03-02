@@ -40,7 +40,7 @@ public class CustomerPage extends BasePage {
     @FindBy(name = "email")
     public WebElement emailField;
 
-    @FindBy(name = "address")
+    @FindBy(xpath = "//input[@id='tp-customer-address']")
     public WebElement addressField;
 
     @FindBy(name = "mobilePhoneNumber")
@@ -61,7 +61,7 @@ public class CustomerPage extends BasePage {
     @FindBy(name = "ssn")
     public WebElement ssnField;
 
-    @FindBy(id="tp-customer-createDate")
+    @FindBy(xpath = "//*[text()='Create Date']/following::input")
     public WebElement createDate;
 
     @FindBy(name = "country.id")
@@ -82,8 +82,19 @@ public class CustomerPage extends BasePage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
-    @FindBy()
+    @FindBy(xpath = "//div[contains(text(),'translation-not-found[gmiBankBackendApp.tPAccountRegistration.updated]")
     public WebElement succesMessage;
+
+    @FindBy(xpath = "//input[@id='tp-customer-address']/following::div[1]")
+    public  WebElement blankAddressWarningMessage;
+
+    @FindBy(xpath = "//input[@id='tp-customer-city']/following::div[1]")
+    public  WebElement blankCityWarningMessage;
+
+    @FindBy(xpath = "")
+    public  WebElement blankCountryWarningMessage;
+    @FindBy(xpath = "")
+    public  WebElement blankStateWarningMessage;
 
 
 

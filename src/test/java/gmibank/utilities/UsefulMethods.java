@@ -2,10 +2,8 @@ package gmibank.utilities;
 
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -64,7 +62,8 @@ public class UsefulMethods {
         stateAbbreviationDictionary.put("WA", "Washington");
         stateAbbreviationDictionary.put("WV", "West Virginia");
         stateAbbreviationDictionary.put("WI", "Wisconsin");
-        stateAbbreviationDictionary.put("WY", "Wyoming"); }
+        stateAbbreviationDictionary.put("WY", "Wyoming");
+    }
 
 
     public static boolean isValidEmailAddress(String email) {
@@ -123,23 +122,5 @@ public class UsefulMethods {
         }
         return textValues;
     }
-//    public static String getPopulatedInfo(List<WebElement> string, int size) throws InterruptedException {
-//        String populatedInfo = "";
-//        List<String> allInfo = UsefulMethods.getTextFromWebElements(string);
-//        for (int i = 1; allInfo.size() < size; i++) {
-//            if (!allInfo.get(i).isEmpty()) {
-//                populatedInfo +=" "+ allInfo.get(i);
-//            }
-//        }
-//        return populatedInfo;
-//    }
-//public static List<String> getAttributeFromWebElements(List<WebElement> elements) throws InterruptedException {
-//    List<String> attributeValues = new ArrayList<>();
-//    for (WebElement element : elements) {
-//        if (!element.getAttribute("value").isEmpty()) {
-//            attributeValues.add(element.getAttribute("value"));
-//        }
-//    }
-//    return attributeValues;
-//}
+
 }

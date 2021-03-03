@@ -7,18 +7,19 @@ import gmibank.pages.LoginPage;
 import gmibank.pages.MainPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
-import org.junit.Assert;
 
-public class US4_UI {
+public class Login {
 
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
-    @Given("user on the stated page {string}")
-    public void user_on_the_stated_page(String string) {
+
+    @Given("user is on the application website")
+    public void user_is_on_the_application_website() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         mainPage.mainPageManIcon.click();
         mainPage.signInButton.click();
     }
+
 
     @When("verifys the cancel option")
     public void verifys_the_cancel_option() {
@@ -40,7 +41,8 @@ public class US4_UI {
 
     @When("user clicks on the sign in button")
     public void user_clicks_on_the_sign_in_button() {
-        loginPage.signButton.click();
+        Driver.waitAndClick(loginPage.signButton,5);
+
     }
 
     @Then("user verifys option {string}")
@@ -48,5 +50,6 @@ public class US4_UI {
         System.out.println("no message availabe");
 
     }
+
 
 }

@@ -5,16 +5,10 @@ import cucumber.api.java.en.When;
 import gmibank.pages.*;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
-import gmibank.utilities.ExcelUtil;
-import gmibank.utilities.WriteToTxt;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class US6_1_UI {
+public class UserInfo {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();

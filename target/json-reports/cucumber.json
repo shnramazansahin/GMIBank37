@@ -3,15 +3,15 @@
     "line": 2,
     "elements": [
       {
-        "line": 74,
-        "name": "userinfo should not be editable with invalid credentials",
+        "line": 20,
+        "name": "register with valid credentials",
         "description": "",
-        "id": "userinfo-segment;userinfo-should-not-be-editable-with-invalid-credentials;;2",
+        "id": "register-page;register-with-valid-credentials;;2",
         "after": [
           {
             "result": {
-              "duration": 9400,
-              "status": "skipped"
+              "duration": 521505200,
+              "status": "passed"
             },
             "match": {
               "location": "Hook.tearDown(Scenario)"
@@ -23,165 +23,233 @@
         "steps": [
           {
             "result": {
-              "duration": 664600,
-              "status": "skipped"
+              "duration": 12550849100,
+              "status": "passed"
             },
-            "line": 61,
-            "name": "user  on the login page",
+            "line": 6,
+            "name": "user on the regisration page",
             "match": {
-              "location": "US6_1_UI.user_on_the_login_page()"
+              "location": "Registration.user_on_the_regisration_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 14500,
-              "status": "skipped"
+              "duration": 225256200,
+              "status": "passed"
             },
-            "line": 62,
-            "name": "user enters valid username \"wallstreetbets\"",
+            "line": 7,
+            "name": "user enters a  9 digit SSN \"123456789\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"wallstreetbets\"",
+                  "val": "9",
+                  "offset": 15
+                },
+                {
+                  "val": "\"123456789\"",
                   "offset": 27
                 }
               ],
-              "location": "US6_1_UI.user_enters_valid_username(String)"
+              "location": "Registration.user_enters_a_digit_SSN(Integer,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 9700,
-              "status": "skipped"
+              "duration": 144004900,
+              "status": "passed"
             },
-            "line": 63,
-            "name": "user enter valid password \"1234As$\"",
+            "line": 8,
+            "name": "user enters a name \"ALI\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1234As$\"",
-                  "offset": 26
+                  "val": "\"ALI\"",
+                  "offset": 19
                 }
               ],
-              "location": "US6_1_UI.user_enter_valid_password(String)"
+              "location": "Registration.user_enters_a_name(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 8300,
-              "status": "skipped"
+              "duration": 133570700,
+              "status": "passed"
             },
-            "line": 64,
-            "name": "user clicks on the Sign In button",
-            "match": {
-              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 8200,
-              "status": "skipped"
-            },
-            "line": 65,
-            "name": "user clicks on the user name \"team 37\"",
+            "line": 9,
+            "name": "user enter a lastname \"AK\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"team 37\"",
+                  "val": "\"AK\"",
+                  "offset": 22
+                }
+              ],
+              "location": "Registration.user_enter_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 145647300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enter an address \"123 WALLSTREET 55565\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123 WALLSTREET 55565\"",
+                  "offset": 22
+                }
+              ],
+              "location": "Registration.user_enter_an_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 131958000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enter a 10 digits phone \"9876543210\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 13
+                },
+                {
+                  "val": "\"9876543210\"",
                   "offset": 29
                 }
               ],
-              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
+              "location": "Registration.user_enter_a_digits_phone_number(Integer,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 7500,
-              "status": "skipped"
+              "duration": 125643500,
+              "status": "passed"
             },
-            "line": 66,
-            "name": "clicks team name \"password\" button",
+            "line": 12,
+            "name": "user create a username \"DEMO\" without digits",
             "match": {
               "arguments": [
                 {
-                  "val": "\"password\"",
-                  "offset": 17
+                  "val": "\"DEMO\"",
+                  "offset": 23
                 }
               ],
-              "location": "US6_1_UI.clicks_team_name_button(String)"
+              "location": "Registration.user_create_a_username_without_digits(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 5900,
-              "status": "skipped"
+              "duration": 178145800,
+              "status": "passed"
             },
-            "line": 67,
-            "name": "user enters current  \"1234As$\"",
+            "line": 13,
+            "name": "user enter a email \"demo@gmail.com\" address",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1234As$\"",
-                  "offset": 21
+                  "val": "\"demo@gmail.com\"",
+                  "offset": 19
                 }
               ],
-              "location": "US8.user_enters_current(String)"
+              "location": "Registration.user_enter_a_email_address(String)"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4800,
-              "status": "skipped"
-            },
-            "line": 68,
-            "name": "user enters new password \"1234As$\" and retype the new password",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 25
-                }
-              ],
-              "location": "US8.user_enters_new_password_and_retype_the_new_password(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 70,
-            "name": "user clicks on the save button",
-            "match": {},
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 142961900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter a valid password \"1234As\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As\"",
+                  "offset": 28
+                }
+              ],
+              "location": "Registration.user_enter_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136018600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user reenter the password as \"1234As\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As\"",
+                  "offset": 29
+                }
+              ],
+              "location": "Registration.user_reenter_the_password_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87321600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click on the register",
+            "match": {
+              "location": "Registration.click_on_the_register()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4302100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify the success message",
+            "match": {
+              "location": "Registration.verify_the_success_message()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Us6"
+            "name": "@NewApplicant"
           },
           {
-            "name": "@Password"
+            "name": "@E2E"
+          },
+          {
+            "name": "@registerNewUserUI"
           }
         ]
       },
       {
-        "line": 75,
-        "name": "userinfo should not be editable with invalid credentials",
+        "line": 36,
+        "name": "admin activation",
         "description": "",
-        "id": "userinfo-segment;userinfo-should-not-be-editable-with-invalid-credentials;;3",
+        "id": "register-page;admin-activation;valid-data;2",
         "after": [
           {
             "result": {
-              "duration": 5100,
-              "status": "skipped"
+              "duration": 450943600,
+              "status": "passed"
             },
             "match": {
               "location": "Hook.tearDown(Scenario)"
@@ -193,165 +261,135 @@
         "steps": [
           {
             "result": {
-              "duration": 18900,
-              "status": "skipped"
+              "duration": 688051400,
+              "status": "passed"
             },
-            "line": 61,
-            "name": "user  on the login page",
+            "line": 25,
+            "name": "user is on the application website",
             "match": {
-              "location": "US6_1_UI.user_on_the_login_page()"
+              "location": "Login.user_is_on_the_application_website()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 10900,
-              "status": "skipped"
+              "duration": 96732200,
+              "status": "passed"
             },
-            "line": 62,
-            "name": "user enters valid username \"wallstreetbets\"",
+            "line": 26,
+            "name": "user enters  valid username \"wallstreetbets\"",
             "match": {
               "arguments": [
                 {
                   "val": "\"wallstreetbets\"",
+                  "offset": 28
+                }
+              ],
+              "location": "Login.user_enters_valid_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 81068300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user enters valid password \"1234As$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234As$\"",
                   "offset": 27
                 }
               ],
-              "location": "US6_1_UI.user_enters_valid_username(String)"
+              "location": "Login.user_enters_valid_password(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 12600,
-              "status": "skipped"
+              "duration": 112538700,
+              "status": "passed"
             },
-            "line": 63,
-            "name": "user enter valid password \"1234As$\"",
+            "line": 28,
+            "name": "user clicks on the sign in button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 26
-                }
-              ],
-              "location": "US6_1_UI.user_enter_valid_password(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6100,
-              "status": "skipped"
-            },
-            "line": 64,
-            "name": "user clicks on the Sign In button",
-            "match": {
-              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 20600,
-              "status": "skipped"
-            },
-            "line": 65,
-            "name": "user clicks on the user name \"team 37\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"team 37\"",
-                  "offset": 29
-                }
-              ],
-              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6300,
-              "status": "skipped"
-            },
-            "line": 66,
-            "name": "clicks team name \"password\" button",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"password\"",
-                  "offset": 17
-                }
-              ],
-              "location": "US6_1_UI.clicks_team_name_button(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 5100,
-              "status": "skipped"
-            },
-            "line": 67,
-            "name": "user enters current  \"1234As$\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 21
-                }
-              ],
-              "location": "US8.user_enters_current(String)"
+              "location": "Login.user_clicks_on_the_sign_in_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 5800,
-              "status": "skipped"
+              "duration": 267136800,
+              "status": "passed"
             },
-            "line": 68,
-            "name": "user enters new password \"1234As$\" and retype the new password",
+            "line": 29,
+            "name": "user clicks on administration dropdown",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 25
-                }
-              ],
-              "location": "US8.user_enters_new_password_and_retype_the_new_password(String)"
+              "location": "E2E.user_clicks_on_administration_dropdown()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 72358100,
+              "status": "passed"
             },
-            "line": 70,
-            "name": "user clicks on the save button",
-            "match": {},
+            "line": 30,
+            "name": "user clicks on the user management button",
+            "match": {
+              "location": "E2E.user_clicks_on_the_user_management_button()"
+            },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1784031900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user activates the current customer",
+            "match": {
+              "location": "E2E.user_activates_the_current_customer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 289394300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user signs out",
+            "match": {
+              "location": "E2E.user_signs_out()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Us6"
+            "name": "@NewApplicant"
           },
           {
-            "name": "@Password"
+            "name": "@E2E"
+          },
+          {
+            "name": "@adminActivation"
           }
         ]
       },
       {
-        "line": 76,
-        "name": "userinfo should not be editable with invalid credentials",
+        "line": 48,
+        "name": "admin activation",
         "description": "",
-        "id": "userinfo-segment;userinfo-should-not-be-editable-with-invalid-credentials;;4",
+        "id": "register-page;admin-activation;valid-data;2",
         "after": [
           {
             "result": {
-              "duration": 6600,
-              "status": "skipped"
+              "duration": 387266600,
+              "status": "passed"
             },
             "match": {
               "location": "Hook.tearDown(Scenario)"
@@ -363,164 +401,698 @@
         "steps": [
           {
             "result": {
-              "duration": 18500,
-              "status": "skipped"
+              "duration": 543521300,
+              "status": "passed"
             },
-            "line": 61,
-            "name": "user  on the login page",
+            "line": 42,
+            "name": "user is on the application website",
             "match": {
-              "location": "US6_1_UI.user_on_the_login_page()"
+              "location": "Login.user_is_on_the_application_website()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 10400,
-              "status": "skipped"
+              "duration": 79961600,
+              "status": "passed"
             },
-            "line": 62,
-            "name": "user enters valid username \"wallstreetbets\"",
+            "line": 43,
+            "name": "user enters  valid username \"t37employee\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"wallstreetbets\"",
+                  "val": "\"t37employee\"",
+                  "offset": 28
+                }
+              ],
+              "location": "Login.user_enters_valid_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77950300,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "user enters valid password \"12345As!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345As!\"",
                   "offset": 27
                 }
               ],
-              "location": "US6_1_UI.user_enters_valid_username(String)"
+              "location": "Login.user_enters_valid_password(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 8300,
-              "status": "skipped"
+              "duration": 52905300,
+              "status": "passed"
             },
-            "line": 63,
-            "name": "user enter valid password \"1234As$\"",
+            "line": 45,
+            "name": "user clicks on the sign in button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 26
-                }
-              ],
-              "location": "US6_1_UI.user_enter_valid_password(String)"
+              "location": "Login.user_clicks_on_the_sign_in_button()"
             },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 8200,
-              "status": "skipped"
-            },
-            "line": 64,
-            "name": "user clicks on the Sign In button",
-            "match": {
-              "location": "US6_1_UI.user_clicks_on_the_Sign_In_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 7400,
-              "status": "skipped"
-            },
-            "line": 65,
-            "name": "user clicks on the user name \"team 37\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"team 37\"",
-                  "offset": 29
-                }
-              ],
-              "location": "US6_1_UI.user_clicks_on_the_user_name(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 19900,
-              "status": "skipped"
-            },
-            "line": 66,
-            "name": "clicks team name \"password\" button",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"password\"",
-                  "offset": 17
-                }
-              ],
-              "location": "US6_1_UI.clicks_team_name_button(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 12600,
-              "status": "skipped"
-            },
-            "line": 67,
-            "name": "user enters current  \"1234As$\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 21
-                }
-              ],
-              "location": "US8.user_enters_current(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 8600,
-              "status": "skipped"
-            },
-            "line": 68,
-            "name": "user enters new password \"1234As$\" and retype the new password",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"1234As$\"",
-                  "offset": 25
-                }
-              ],
-              "location": "US8.user_enters_new_password_and_retype_the_new_password(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 70,
-            "name": "user clicks on the save button",
-            "match": {},
-            "keyword": "When "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Us6"
+            "name": "@NewApplicant"
           },
           {
-            "name": "@Password"
+            "name": "@E2E"
+          },
+          {
+            "name": "@loginEmployee"
+          }
+        ]
+      },
+      {
+        "line": 66,
+        "name": "managing the account",
+        "description": "",
+        "id": "register-page;managing-the-account;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 5686978900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 145131200,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user clicks on my operation and choose manage account",
+            "match": {
+              "location": "ManageAccount.user_clicks_on_my_operation_and_choose_manage_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 101916800,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user click on create a new account button",
+            "match": {
+              "location": "ManageAccount.user_click_on_create_a_new_account_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 137669700,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "user provides description as  \"saving account NEW\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"saving account NEW\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_provides_description_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 81540500,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user provides balance as \"1000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1000\"",
+                  "offset": 25
+                }
+              ],
+              "location": "ManageAccount.user_provides_balance_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 101151800,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user provides account type as \"SAVING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SAVING\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_provides_account_type_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63841100,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user choose account status as \"ACTIVE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACTIVE\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_choose_account_status_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77819000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "user user saves the changes",
+            "match": {
+              "location": "ManageAccount.user_user_saves_the_changes()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicant"
+          },
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@ManageAccounts"
+          }
+        ]
+      },
+      {
+        "line": 67,
+        "name": "managing the account",
+        "description": "",
+        "id": "register-page;managing-the-account;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 385692900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7356545000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user clicks on my operation and choose manage account",
+            "match": {
+              "location": "ManageAccount.user_clicks_on_my_operation_and_choose_manage_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 441569600,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user click on create a new account button",
+            "match": {
+              "location": "ManageAccount.user_click_on_create_a_new_account_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 131408700,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "user provides description as  \"checking account NEW\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"checking account NEW\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_provides_description_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76781500,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user provides balance as \"20000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"20000\"",
+                  "offset": 25
+                }
+              ],
+              "location": "ManageAccount.user_provides_balance_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60803000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user provides account type as \"CHECKING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHECKING\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_provides_account_type_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61837300,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user choose account status as \"ACTIVE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACTIVE\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_choose_account_status_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61231900,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "user user saves the changes",
+            "match": {
+              "location": "ManageAccount.user_user_saves_the_changes()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicant"
+          },
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@ManageAccounts"
+          }
+        ]
+      },
+      {
+        "line": 99,
+        "name": "managing customer",
+        "description": "",
+        "id": "register-page;managing-customer;all-data;2",
+        "after": [
+          {
+            "result": {
+              "duration": 585762800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8704070800,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "user clicks on my operation and choose mangage customers",
+            "match": {
+              "location": "ManageCustomers.user_clicks_on_my_operation_and_choose_mangage_customers()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 382468200,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "user click on create a new account button",
+            "match": {
+              "location": "ManageAccount.user_click_on_create_a_new_account_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 565820100,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "user search the SSN as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 23
+                }
+              ],
+              "location": "ManageCustomers.user_search_the_SSN_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 146069100,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "user user clicks on the searchbox",
+            "match": {
+              "location": "ManageCustomers.user_user_clicks_on_the_searchbox()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 85700,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "user types a firstname as  \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "ManageCustomers.user_types_a_firstname_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45800,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "user types a lastname \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "ManageCustomers.user_types_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 205251700,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "user provides the middle initial as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "ManageCustomers.user_provides_the_middle_initial_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63700,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "user types a email as \"\" address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "ManageCustomers.user_types_a_email_as_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20300,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "user provised cell number as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ManageCustomers.user_provised_cell_number_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 211944700,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "user enters phone \"\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 18
+                }
+              ],
+              "location": "ManageCustomers.user_enters_phone_number(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 169931000,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "user types the zipCode as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 26
+                }
+              ],
+              "location": "ManageCustomers.user_types_the_zipCode_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 55289003900,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "user enter an address \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "Registration.user_enter_an_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 229800900,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user types the city as \"Fairfax\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fairfax\"",
+                  "offset": 23
+                }
+              ],
+              "location": "ManageCustomers.user_types_the_city_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27792100,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user types the same ssn as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "ManageCustomers.user_types_the_same_ssn_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 172836200,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user selects a country as \"USA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USA\"",
+                  "offset": 26
+                }
+              ],
+              "location": "ManageCustomers.user_selects_a_country_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143513300,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user types the state name as \"Virginia\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Virginia\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ManageCustomers.user_types_the_state_name_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 189608900,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user selects an account from dropdown as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 41
+                }
+              ],
+              "location": "ManageCustomers.user_selects_an_account_from_dropdown_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 203603000,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "user clicks on save button",
+            "match": {
+              "location": "ManageCustomers.user_clicks_on_save_button()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicant"
+          },
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@ManageCustomer"
           }
         ]
       }
     ],
-    "name": "userinfo segment",
+    "name": "register page",
     "description": "",
-    "id": "userinfo-segment",
+    "id": "register-page",
     "keyword": "Feature",
-    "uri": "src\\test\\resources\\features\\US6.feature",
+    "uri": "src\\test\\resources\\features\\End2End.feature",
     "tags": [
       {
-        "name": "@Us6",
+        "name": "@NewApplicant",
         "type": "Tag",
         "location": {
           "line": 1,

@@ -13,7 +13,7 @@ import org.junit.Assert;
 
 import java.util.Set;
 
-public class US5_UI {
+public class SingwithInvalid {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
     UserSettingPage userSettingPage=new UserSettingPage();

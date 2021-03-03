@@ -1,7 +1,9 @@
 package gmibank.pojos;
 
-public class Customer {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Customer {
     private int id;
     private String firstName;
     private String lastName;
@@ -18,6 +20,17 @@ public class Customer {
     private Country country;
     private String state;
     private User user;
+
+
+    public Accounts getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(Accounts accounts) {
+        this.accounts = accounts;
+    }
+
+    private Accounts accounts;
 
     public int getId() {
         return id;

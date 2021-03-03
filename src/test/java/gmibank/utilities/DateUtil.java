@@ -36,13 +36,14 @@ public class DateUtil {
         return today;
     }
 
+
+
     public static String previousDays(int day) {
             LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy 'T' HH:mm:ss 'Z'");
             return   dateTimeFormatter.format(now.minusDays(day));
 
         }
-
 
 
 

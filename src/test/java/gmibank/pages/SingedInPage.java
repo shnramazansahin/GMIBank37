@@ -23,6 +23,21 @@ public class SingedInPage {
     @FindBy(xpath="//span[contains(.,'Manage Accounts')]")
     public WebElement manageAccounts;
 
+    @FindBy(xpath="//span[contains(.,'Manage Customers')]")
+    public WebElement manageCustomers;
+
+    @FindBy(xpath="//span[contains(.,'User management')]")
+    public WebElement userManagementButton;
+
+    @FindBy(xpath="//span[contains(.,'Administration')]")
+    public WebElement AdministrationButton;
+
+    @FindBy(xpath=" //span[contains(.,'Sign out')]")
+    public WebElement signOut;
+
+
+
+
 
 
 

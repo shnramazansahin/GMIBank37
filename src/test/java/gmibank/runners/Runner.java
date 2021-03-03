@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "gmibank/stepdefinations",
-        tags = "@Password",
-        dryRun = true
+        tags = "@E2E",
+        dryRun = false
 
 
 

@@ -57,7 +57,7 @@ Feature: Customer creation feature
     Then System should display warning message for address "<address>" requirement
     Examples:
       | address |
-#      | 12 abc  | testing for also valid address to see result
+#      | 12 abc  | testing for also valid address to see result again :)
       |         |
       | 123     |
       | abcd    |

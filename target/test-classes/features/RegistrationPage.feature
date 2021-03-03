@@ -6,7 +6,7 @@ Feature:Registration page feature
   Given User is on the home page
     And User navigates to registration page
 
-  @ValidCredentials
+  @Register
   Scenario:Register with valid credentials
     Given user enters a  9 digit SSN "SSN"
     When user enters a name"name"

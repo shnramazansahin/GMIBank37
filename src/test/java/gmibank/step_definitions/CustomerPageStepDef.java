@@ -7,10 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gmibank.pages.CustomerPage;
 import gmibank.pages.LoginPage;
-import gmibank.utilities.BrowserUtils;
-import gmibank.utilities.DateUtil;
-import gmibank.utilities.Driver;
-import gmibank.utilities.UsefulMethods;
+import gmibank.utilities.*;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -88,7 +85,7 @@ public class CustomerPageStepDef {
     public void user_enters_a_lastname(String lastname) {
 
         customerPage.lastNameField.clear();
-        Driver.waitAndSendText(customerPage.searchSsnField, lastname, 3);
+        Driver.waitAndSendText(customerPage.lastNameField, lastname, 3);
 
     }
 
@@ -146,10 +143,6 @@ public class CustomerPageStepDef {
         customerPage.cityField.clear();
         Driver.waitAndSendText(customerPage.cityField, city, 3);
 
-        if (customerPage.cityField.getText().isEmpty()) {
-
-            Assert.assertEquals("This field is required.", customerPage.blankCityWarningMessage.getText());
-        }
 
     }
 
@@ -181,7 +174,8 @@ public class CustomerPageStepDef {
     @When("User can select a country as {string}")
     public void user_can_select_a_country_as(String country) {
 
-        Driver.selectAnItemFromDropdown(customerPage.countryDropdown, country);
+        BrowserUtils.scrollToElement(customerPage.countryDropdown);
+        Driver.selectByVisibleText(customerPage.countryDropdown,country);
 
         //There is no warning message for blank field ###Bug
 
@@ -192,13 +186,13 @@ public class CustomerPageStepDef {
 
     public void user_enters_as_a_state_as_in_US(String state) {
 
-        boolean abv = UsefulMethods.stateAbbreviationDictionary.containsKey(state);
-        boolean stateName = UsefulMethods.stateAbbreviationDictionary.containsValue(state);
-        if (abv || stateName) {
+//        boolean abv = UsefulMethods.stateAbbreviationDictionary.containsKey(state);
+//        boolean stateName = UsefulMethods.stateAbbreviationDictionary.containsValue(state);
+//        if (abv || stateName) {
             Driver.waitAndSendText(customerPage.stateField, state, 3);
-        } else {
-            System.out.println("Warning message should be here");  //There is no warning message but requirement says "State" is must
-        }
+//        } else {
+//            System.out.println("Warning message should be here");  //There is no warning message but requirement says "State" is must
+//        }
 
         //There is no warning message for blank field ###Bug
     }
@@ -206,14 +200,18 @@ public class CustomerPageStepDef {
     @When("User can select an user type as {string}")
     public void user_can_select_an_user_type_as(String userType) {
 
-        Driver.selectAnItemFromDropdown(customerPage.userDropdown, userType);
+       // Driver.selectAnItemFromDropdown(customerPage.userDropdown, userType);
 
     }
 
     @When("User can select an account as {string}")
     public void user_can_select_an_account_as(String accountType) {
 
-        Driver.selectAnItemFromDropdown(customerPage.accountsDropdown, accountType);
+        //Driver.selectAnItemFromDropdown(customerPage.accountsDropdown, accountType);
+        List<String >accounts = ReadTxt.returnAllAccounts(ConfigurationReader.getProperty("AllAccountInfoFile"));
+
+        Driver.waitAndClickLocationText(customerPage.accountsDropdown,accounts.get(accounts.size()-1));
+        Driver.waitAndClickLocationText(customerPage.accountsDropdown,accounts.get(accounts.size()-2));
 
 
     }
@@ -221,7 +219,7 @@ public class CustomerPageStepDef {
     @When("User able to check zelle enrolled checkbox")
     public void userAbleToCheckZelleEnrolledCheckbox() {
 
-        customerPage.zelleEnrolledCheckButton.isEnabled();
+        Assert.assertTrue(customerPage.zelleEnrolledCheckButton.isEnabled());
     }
 
     @When("User clicks on the save button")

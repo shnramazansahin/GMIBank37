@@ -151,7 +151,7 @@ public class BrowserUtils {
      *
      * @param element
      */
-    public void waitForStaleElement(WebElement element) {
+    public static void waitForStaleElement(WebElement element) {
         int y = 0;
         while (y <= 15) {
             if (y == 1)

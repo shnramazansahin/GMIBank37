@@ -1,18 +1,20 @@
 package gmibank.step_definitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gmibank.pages.AccountCreationPage;
 import gmibank.pages.LoginPage;
-import gmibank.utilities.BrowserUtils;
-import gmibank.utilities.DateUtil;
-import gmibank.utilities.Driver;
+import gmibank.pojos.Accounts;
+import gmibank.utilities.*;
 import org.openqa.selenium.Keys;
 
 public class AccountCreationStepDef {
 
     AccountCreationPage accountCreationPage=new AccountCreationPage();
     LoginPage loginPage=new LoginPage();
+    Accounts accounts=new Accounts();
+
 
 
     @When("User clicks on my operations")
@@ -38,12 +40,14 @@ public class AccountCreationStepDef {
     @When("User provides a description {string}")
     public void user_provides_a_description(String description) {
 
+       accounts.setDescription(description);
        Driver.waitAndSendText(accountCreationPage.description,description,3);
     }
 
     @When("User provides balance {string}")
     public void user_provides_balance(String balance) {
 
+        accounts.setBalance(Double.parseDouble(balance));
         Driver.waitAndSendText(accountCreationPage.balance,balance,3);
     }
 
@@ -59,8 +63,8 @@ public class AccountCreationStepDef {
         Driver.selectAnItemFromDropdown(accountCreationPage.accountStatus,accountStatus);
     }
 
-    @When("User  choose a valid date")
-    public void user_choose_a_valid_date() {
+    @And("User  choose a valid date for creation date")
+    public void userChooseAValidDateForCreationDate() {
 
         String todaysDate=DateUtil.todaysDate5();
         String month=todaysDate.substring(0,2);
@@ -77,6 +81,10 @@ public class AccountCreationStepDef {
     @Then("User saves the account")
     public void user_saves_the_account() {
 
+        WriteToTxt.saveAccountInfo(ConfigurationReader.getProperty("AllAccountInfoFile"),accounts.getDescription());
         Driver.waitAndClick(accountCreationPage.save,3);
+
     }
+
+
 }

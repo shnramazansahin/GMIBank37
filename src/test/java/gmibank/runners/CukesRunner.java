@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "gmibank/step_definitions",
-        tags = "@InvalidState",
+        tags = "@E2E",
         dryRun = false
 
 

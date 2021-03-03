@@ -1,6 +1,6 @@
 [
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
         "line": 5,
@@ -11,75 +11,15 @@
         "steps": [
           {
             "result": {
-              "duration": 4497688425,
+              "duration": 4812477362,
               "status": "passed"
             },
             "line": 6,
-            "name": "User goes to login page",
+            "name": "User is on the home page",
             "match": {
-              "location": "LoginPageStepDef.user_goes_to_login_page()"
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
             },
             "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 274656083,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user enters a valid username and password",
-            "match": {
-              "location": "LoginPageStepDef.user_enters_a_valid_username_and_password()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 30511,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "User logs in",
-            "match": {
-              "location": "LoginPageStepDef.user_logs_in()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 583412375,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User navigates to my operations dropdown",
-            "match": {
-              "location": "CustomerPageStepDef.user_navigates_to_my_operations_dropdown()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 90846074,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User clicks on the manage customers",
-            "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_the_manage_customers()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 108777059,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User clicks on create a new customer button",
-            "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_create_a_new_customer_button()"
-            },
-            "keyword": "And "
           }
         ]
       },
@@ -87,7 +27,7 @@
         "before": [
           {
             "result": {
-              "duration": 6361749859,
+              "duration": 5312548620,
               "status": "passed"
             },
             "match": {
@@ -95,73 +35,237 @@
             }
           }
         ],
-        "line": 86,
-        "name": "State should be provided as US state and cannot be blank",
+        "line": 9,
+        "name": "Register with valid credentials",
         "description": "",
-        "id": "customer-creation-feature;state-should-be-provided-as-us-state-and-cannot-be-blank;;2",
+        "id": "test-all-main-functionality-feature;register-with-valid-credentials",
         "after": [
           {
             "result": {
-              "duration": 134810437,
+              "duration": 519532120,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.tearDown()"
+              "location": "Hooks.tearDown(Scenario)"
             }
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 14455174,
+              "duration": 155943463,
               "status": "passed"
             },
-            "line": 81,
-            "name": "User enters as a state as \"\" in US",
+            "line": 10,
+            "name": "User navigates to registration page",
+            "match": {
+              "location": "RegistrationStepDef.user_navigates_to_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 776806921,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a  9 digit SSN \"SSN\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"\"",
-                  "offset": 26
+                  "val": "9",
+                  "offset": 15
+                },
+                {
+                  "val": "\"SSN\"",
+                  "offset": 27
                 }
               ],
-              "location": "CustomerPageStepDef.user_enters_as_a_state_as_in_US(String)"
+              "location": "RegistrationStepDef.user_enters_a_digit_SSN(Integer,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 80025932,
+              "duration": 69105747,
               "status": "passed"
             },
-            "line": 82,
-            "name": "User clicks on the save button",
+            "line": 12,
+            "name": "user enters a name\"name\"",
             "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_the_save_button()"
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 18
+                }
+              ],
+              "location": "RegistrationStepDef.user_enters_a_name(String)"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 50398128,
+              "duration": 71404459,
               "status": "passed"
             },
-            "line": 83,
-            "name": "System should display warning message for  requirement",
+            "line": 13,
+            "name": "user enter a lastname \"lastname\"",
             "match": {
-              "location": "CustomerPageStepDef.systemShouldDisplayWarningMessageForCityRequirement()"
+              "arguments": [
+                {
+                  "val": "\"lastname\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 91281247,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter an address \"address\" with zip",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"address\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_an_address_with_zip(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88570725,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enter a 10 digits phone \"phone\" number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 13
+                },
+                {
+                  "val": "\"phone\"",
+                  "offset": 29
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_digits_phone_number(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 81037524,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user create a username \"username\" without digits",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"username\"",
+                  "offset": 23
+                }
+              ],
+              "location": "RegistrationStepDef.user_create_a_username_without_digits(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108269672,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter a email \"email\" address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email\"",
+                  "offset": 19
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_email_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 103391450,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enter a valid password \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password\"",
+                  "offset": 28
+                }
+              ],
+              "location": "RegistrationStepDef.user_enter_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75061283,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user reenter the \"confirmation password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"confirmation password\"",
+                  "offset": 17
+                }
+              ],
+              "location": "RegistrationStepDef.user_reenter_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 131957596,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "click on the register",
+            "match": {
+              "location": "RegistrationStepDef.click_on_the_register()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1326122809,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify the success message",
+            "match": {
+              "location": "RegistrationStepDef.verifyTheSuccessMessage()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Customer"
+            "name": "@E2E"
           },
           {
-            "name": "@InvalidState"
+            "name": "@Registration"
           }
         ]
       },
@@ -174,10 +278,54 @@
         "steps": [
           {
             "result": {
-              "duration": 6977150807,
+              "duration": 5462142103,
               "status": "passed"
             },
             "line": 6,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10030195556,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "User activation by admin",
+        "description": "",
+        "id": "test-all-main-functionality-feature;user-activation-by-admin",
+        "after": [
+          {
+            "result": {
+              "duration": 188410536,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 801241718,
+              "status": "passed"
+            },
+            "line": 26,
             "name": "User goes to login page",
             "match": {
               "location": "LoginPageStepDef.user_goes_to_login_page()"
@@ -186,63 +334,92 @@
           },
           {
             "result": {
-              "duration": 167198934,
+              "duration": 462780683,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user enters a valid username and password",
+            "line": 27,
+            "name": "User logs in as an admin",
             "match": {
-              "location": "LoginPageStepDef.user_enters_a_valid_username_and_password()"
+              "location": "UserManagementStepDef.user_logs_in_as_an_admin()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 22345,
+              "duration": 3054008095,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User logs in",
+            "line": 28,
+            "name": "User clicks on administration dropdown",
             "match": {
-              "location": "LoginPageStepDef.user_logs_in()"
+              "location": "UserManagementStepDef.user_clicks_on_administration_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 62940814,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User clicks on the user management button",
+            "match": {
+              "location": "UserManagementStepDef.user_clicks_on_the_user_management_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1379066158,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User activates the current customer",
+            "match": {
+              "location": "UserManagementStepDef.user_activates_the_current_customer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 104968178,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User signs out",
+            "match": {
+              "location": "UserManagementStepDef.user_signs_out()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E"
           },
           {
-            "result": {
-              "duration": 405539491,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User navigates to my operations dropdown",
-            "match": {
-              "location": "CustomerPageStepDef.user_navigates_to_my_operations_dropdown()"
-            },
-            "keyword": "And "
-          },
+            "name": "@Activation"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
           {
             "result": {
-              "duration": 67915654,
+              "duration": 4294771702,
               "status": "passed"
             },
-            "line": 10,
-            "name": "User clicks on the manage customers",
+            "line": 6,
+            "name": "User is on the home page",
             "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_the_manage_customers()"
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 126481080,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User clicks on create a new customer button",
-            "match": {
-              "location": "CustomerPageStepDef.user_clicks_on_create_a_new_customer_button()"
-            },
-            "keyword": "And "
+            "keyword": "Given "
           }
         ]
       },
@@ -250,7 +427,7 @@
         "before": [
           {
             "result": {
-              "duration": 5570502672,
+              "duration": 2998197725,
               "status": "passed"
             },
             "match": {
@@ -258,18 +435,18 @@
             }
           }
         ],
-        "line": 87,
-        "name": "State should be provided as US state and cannot be blank",
+        "line": 49,
+        "name": "User should be able to create an account",
         "description": "",
-        "id": "customer-creation-feature;state-should-be-provided-as-us-state-and-cannot-be-blank;;3",
+        "id": "test-all-main-functionality-feature;user-should-be-able-to-create-an-account;;2",
         "after": [
           {
             "result": {
-              "duration": 146287326,
+              "duration": 139646839,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.tearDown()"
+              "location": "Hooks.tearDown(Scenario)"
             }
           }
         ],
@@ -278,15 +455,783 @@
         "steps": [
           {
             "result": {
-              "duration": 93922,
+              "duration": 831891808,
               "status": "passed"
             },
-            "line": 81,
-            "name": "User enters as a state as \"Endulus\" in US",
+            "line": 36,
+            "name": "User goes to login page",
+            "match": {
+              "location": "LoginPageStepDef.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 390274734,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user enters a valid username and password",
+            "match": {
+              "location": "LoginPageStepDef.user_enters_a_valid_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 394830186,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "User clicks on my operations",
+            "match": {
+              "location": "AccountCreationStepDef.user_clicks_on_my_operations()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 59471743,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User selects manage account",
+            "match": {
+              "location": "AccountCreationStepDef.user_selects_manage_account()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76051695,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User clicks on create a new account",
+            "match": {
+              "location": "AccountCreationStepDef.user_clicks_on_create_a_new_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 114755372,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "User provides a description \"Checking account for user\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Endulus\"",
+                  "val": "\"Checking account for user\"",
+                  "offset": 28
+                }
+              ],
+              "location": "AccountCreationStepDef.user_provides_a_description(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 60508457,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "User provides balance \"10000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10000\"",
+                  "offset": 22
+                }
+              ],
+              "location": "AccountCreationStepDef.user_provides_balance(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5314251154,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "User choose account type \"CHECKING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHECKING\"",
+                  "offset": 25
+                }
+              ],
+              "location": "AccountCreationStepDef.user_choose_account_type(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5111000635,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "User provides the account status \"ACTIVE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACTIVE\"",
+                  "offset": 33
+                }
+              ],
+              "location": "AccountCreationStepDef.user_provides_the_account_status(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 150902683,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "User  choose a valid date for creation date",
+            "match": {
+              "location": "AccountCreationStepDef.userChooseAValidDateForCreationDate()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 69733218,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "User saves the account",
+            "match": {
+              "location": "AccountCreationStepDef.user_saves_the_account()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@AccountCreation"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3934028007,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6082046586,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 50,
+        "name": "User should be able to create an account",
+        "description": "",
+        "id": "test-all-main-functionality-feature;user-should-be-able-to-create-an-account;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 148243102,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 778045068,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "User goes to login page",
+            "match": {
+              "location": "LoginPageStepDef.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 215777844,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user enters a valid username and password",
+            "match": {
+              "location": "LoginPageStepDef.user_enters_a_valid_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 347294692,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "User clicks on my operations",
+            "match": {
+              "location": "AccountCreationStepDef.user_clicks_on_my_operations()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57883704,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User selects manage account",
+            "match": {
+              "location": "AccountCreationStepDef.user_selects_manage_account()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74241157,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User clicks on create a new account",
+            "match": {
+              "location": "AccountCreationStepDef.user_clicks_on_create_a_new_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 116576137,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "User provides a description \"Saving account for user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Saving account for user\"",
+                  "offset": 28
+                }
+              ],
+              "location": "AccountCreationStepDef.user_provides_a_description(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59968823,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "User provides balance \"10000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10000\"",
+                  "offset": 22
+                }
+              ],
+              "location": "AccountCreationStepDef.user_provides_balance(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5146407875,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "User choose account type \"SAVING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SAVING\"",
+                  "offset": 25
+                }
+              ],
+              "location": "AccountCreationStepDef.user_choose_account_type(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5106514693,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "User provides the account status \"ACTIVE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACTIVE\"",
+                  "offset": 33
+                }
+              ],
+              "location": "AccountCreationStepDef.user_provides_the_account_status(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 97992401,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "User  choose a valid date for creation date",
+            "match": {
+              "location": "AccountCreationStepDef.userChooseAValidDateForCreationDate()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 60761290,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "User saves the account",
+            "match": {
+              "location": "AccountCreationStepDef.user_saves_the_account()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@AccountCreation"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4294336325,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6855330176,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 83,
+        "name": "User able to create new customer",
+        "description": "",
+        "id": "test-all-main-functionality-feature;user-able-to-create-new-customer;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 141155310,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 832107254,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "User goes to login page",
+            "match": {
+              "location": "LoginPageStepDef.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 283960408,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "user enters a valid username and password",
+            "match": {
+              "location": "LoginPageStepDef.user_enters_a_valid_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 426976455,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "User navigates to my operations dropdown",
+            "match": {
+              "location": "CustomerPageStepDef.user_navigates_to_my_operations_dropdown()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71653098,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "User clicks on the manage customers",
+            "match": {
+              "location": "CustomerPageStepDef.user_clicks_on_the_manage_customers()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112171666,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "User clicks on create a new customer button",
+            "match": {
+              "location": "CustomerPageStepDef.user_clicks_on_create_a_new_customer_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 194909170,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "User enters  9 digit SSN in ssn search box \"458-42-1683\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 13
+                },
+                {
+                  "val": "\"458-42-1683\"",
+                  "offset": 43
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_digit_SSN_in_ssn_search_box(Integer,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3094794196,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "User clicks on search button",
+            "match": {
+              "location": "CustomerPageStepDef.userClicksOnSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3102044271,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "User should see all registration information",
+            "match": {
+              "location": "CustomerPageStepDef.userShouldSeeAllRegistrationInformation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 108657193,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "User enters a first name as \"Olen\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Olen\"",
+                  "offset": 28
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_a_first_name_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117853116,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "User enters a lastname \"Johnston\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Johnston\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_a_lastname(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108295011,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "User enters a middel initials as \"OJ\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OJ\"",
+                  "offset": 33
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_a_middel_initials_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 150785809,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "User enters an email  address as\"OlenJohnston@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OlenJohnston@gmail.com\"",
+                  "offset": 32
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_an_email_address_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 145933457,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "User enters 10 digits mobile phone number as \"211-490-4326\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 12
+                },
+                {
+                  "val": "\"211-490-4326\"",
+                  "offset": 45
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_digits_mobile_phone_number_as(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 123560780,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "User enters 10 digits phone number as \"124-456-7890\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 12
+                },
+                {
+                  "val": "\"124-456-7890\"",
+                  "offset": 38
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_digits_phone_number_as(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 128251308,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "User enters a zip code as \"76543\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"76543\"",
+                  "offset": 26
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_a_zip_code_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121339558,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "User enters an address as \"31674 Mitchell Landing\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"31674 Mitchell Landing\"",
+                  "offset": 26
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_an_address_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 109869909,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "User enters a city name as \"Dallas\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Dallas\"",
+                  "offset": 27
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_a_city_name_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 130505548,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "User enters a 9 digits SSN as \"458-42-1683\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 14
+                },
+                {
+                  "val": "\"458-42-1683\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CustomerPageStepDef.user_enters_a_digits_SSN_as(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 149937346,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "User creates a date as \"Create Date\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create Date\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CustomerPageStepDef.user_creates_a_date_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 231209840,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "User can select a country as \"USA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USA\"",
+                  "offset": 29
+                }
+              ],
+              "location": "CustomerPageStepDef.user_can_select_a_country_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 79953297,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "User enters as a state as \"Texas\" in US",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Texas\"",
                   "offset": 26
                 }
               ],
@@ -296,47 +1241,294 @@
           },
           {
             "result": {
-              "duration": 58885092,
+              "duration": 60285,
               "status": "passed"
             },
-            "line": 82,
+            "line": 75,
+            "name": "User can select an user type as \"User Type\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User Type\"",
+                  "offset": 32
+                }
+              ],
+              "location": "CustomerPageStepDef.user_can_select_an_user_type_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 375111165,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "User can select an account as \"Account Type\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Type\"",
+                  "offset": 30
+                }
+              ],
+              "location": "CustomerPageStepDef.user_can_select_an_account_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16859356,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "User able to check zelle enrolled checkbox",
+            "match": {
+              "location": "CustomerPageStepDef.userAbleToCheckZelleEnrolledCheckbox()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 97210758,
+              "status": "passed"
+            },
+            "line": 78,
             "name": "User clicks on the save button",
             "match": {
               "location": "CustomerPageStepDef.user_clicks_on_the_save_button()"
             },
             "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@CustomerCreation"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3979912565,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on the home page",
+            "match": {
+              "location": "RegistrationStepDef.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1538210247,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 101,
+        "name": "Money transfer should be available",
+        "description": "",
+        "id": "test-all-main-functionality-feature;money-transfer-should-be-available;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 143176719,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 757588952,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "User goes to login page",
+            "match": {
+              "location": "LoginPageStepDef.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 153149730,
+              "duration": 737962911,
               "status": "passed"
             },
-            "line": 83,
-            "name": "System should display warning message for  requirement",
+            "line": 90,
+            "name": "User logs in as a customer",
             "match": {
-              "location": "CustomerPageStepDef.systemShouldDisplayWarningMessageForCityRequirement()"
+              "location": "MoneyTransactionStepDef.user_logs_in_as_a_customer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 361226787,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "User clicks on my operations",
+            "match": {
+              "location": "AccountCreationStepDef.user_clicks_on_my_operations()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63781675,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "User navigates to money transfer button",
+            "match": {
+              "location": "MoneyTransactionStepDef.user_navigates_to_money_transfer_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5075063064,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "User selects an account from account dropdown \"checking account for t37customer\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"checking account for t37customer\"",
+                  "offset": 46
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_selects_an_account_from_account_dropdown(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5080637916,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "User selects an account to account dropdown \"investment account for t37customer\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"investment account for t37customer\"",
+                  "offset": 44
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_selects_an_account_to_account_dropdown(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 119206964,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "User enters amount of balance \"3000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3000\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_enters_amount_of_balance(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 133401794,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "User provides a description for transfer \"3000$ transfered between checking and investment accounts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3000$ transfered between checking and investment accounts\"",
+                  "offset": 41
+                }
+              ],
+              "location": "MoneyTransactionStepDef.user_provides_a_description_for_transfer(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44630376,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "User clicks on make transfer button",
+            "match": {
+              "location": "MoneyTransactionStepDef.user_clicks_on_make_transfer_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68169,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "System should display succes message as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "MoneyTransactionStepDef.system_should_display_succes_message_as(String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Customer"
+            "name": "@E2E"
           },
           {
-            "name": "@InvalidState"
+            "name": "@MoneyTransaction"
           }
         ]
       }
     ],
-    "name": "Customer creation feature",
-    "description": "  Create a new customer",
-    "id": "customer-creation-feature",
+    "name": "Test all main functionality feature",
+    "description": "",
+    "id": "test-all-main-functionality-feature",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/CustomerPage.feature",
+    "uri": "src/test/resources/features/EndToEnd.feature",
     "tags": [
       {
-        "name": "@Customer",
+        "name": "@E2E",
         "type": "Tag",
         "location": {
           "line": 1,

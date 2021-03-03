@@ -20,16 +20,16 @@ public class AccountCreationPage extends BasePage {
     @FindBy(xpath="//input[@name='balance']")
     public WebElement balance;
 
-    @FindBy(xpath="//select[@name='accountType']")
+    @FindBy(id="tp-account-accountType")
     public WebElement accountType;
 
-    @FindBy(xpath="//select[@name='accountStatusType']")
+    @FindBy(id="tp-account-accountStatusType")
     public WebElement accountStatus;
 
-    @FindBy(xpath="//input[@name='createDate']/following::input")
+    @FindBy(xpath="//input[@id='tp-account-createDate']/following::input")
     public WebElement  createDate;
 
-    @FindBy(xpath="//input[@name='closedDate']")
+    @FindBy(xpath="//input[@id='tp-account-closedDate']/following::input")
     public WebElement closedDate;
 
     @FindBy(xpath="//input[@name='employee.id']")
@@ -37,4 +37,7 @@ public class AccountCreationPage extends BasePage {
 
     @FindBy(xpath="//span[contains(.,'Save')]")
     public WebElement save;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
+    public WebElement accounCreationSuccesMessage;
 }

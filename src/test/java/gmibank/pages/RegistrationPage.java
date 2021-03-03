@@ -60,6 +60,7 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
     public WebElement firstbutton;
+
     public void navigateRegister() {
         firstbutton.click();
         registrationButton.click();

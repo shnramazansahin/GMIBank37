@@ -127,7 +127,7 @@ public class WriteToTxt {
         }
     }
 
-    public static void saveAllCustomer(String fileName, Customer customer, String password, String username)  {
+    public static void saveAllCustomer(String fileName, Customer customer,String password,String username)  {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
@@ -178,7 +178,7 @@ public class WriteToTxt {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
 
-                writer.append(description + ",\n" );
+            writer.append(description + ",\n" );
 
 
             writer.close();
@@ -187,20 +187,20 @@ public class WriteToTxt {
         }
     }
 
-    public static void saveCustomerInfo ( List<String> items){
+    public static void saveCustomerInfo ( List <String> items){
 
         String fileLocation = "location";
-       try {
+        try {
 
-           BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation, true));
-           for (int i = 0; i < items.size(); i++) {
-               writer.append(items.get(i)+"\n");
-           }
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation, true));
+            for (int i = 0; i < items.size(); i++) {
+                writer.append(items.get(i)+"\n");
+            }
 
 
-       }catch (Exception e){
+        }catch (Exception e){
 
-       }
+        }
 
 
     }

@@ -1,4 +1,4 @@
-@test
-Feature: test
-  Scenario: Gmi
-    Given user goes to page
+@dum
+ Feature: All tests
+  Scenario: s
+    Given asd

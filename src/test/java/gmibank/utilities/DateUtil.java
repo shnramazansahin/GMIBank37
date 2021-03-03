@@ -1,6 +1,8 @@
 package gmibank.utilities;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateUtil {
@@ -28,4 +30,21 @@ public class DateUtil {
         String today = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
         return today;
     }
+
+    public static String todaysDate5(){
+        String today = new SimpleDateFormat("MM/dd/yyyy hh:mm").format(new Date());
+        return today;
+    }
+
+
+
+    public static String previousDays(int day) {
+            LocalDateTime now = LocalDateTime.now();
+            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy 'T' HH:mm:ss 'Z'");
+            return   dateTimeFormatter.format(now.minusDays(day));
+
+        }
+
+
+
 }

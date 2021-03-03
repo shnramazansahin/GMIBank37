@@ -8,8 +8,7 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import gmibank.pojos.pojos.Customer;
-
+import gmibank.pojos.Customer;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;

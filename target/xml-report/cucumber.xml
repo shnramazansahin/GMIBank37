@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="18.994987">
-    <testcase classname="test" name="Gmi" time="18.994987">
-        <system-out><![CDATA[Given user goes to page.....................................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="101.716511">
+    <testcase classname="register page" name="register with valid credentials" time="14.530671">
+        <system-out><![CDATA[Given user on the regisration page..........................................passed
+When user enters a  9 digit SSN "123456789".................................passed
+When user enters a name "ALI"...............................................passed
+When user enter a lastname "AK".............................................passed
+When user enter an address "123 WALLSTREET 55565"...........................passed
+When user enter a 10 digits phone "9876543210" number.......................passed
+When user create a username "DEMO" without digits...........................passed
+When user enter a email "demo@gmail.com" address............................passed
+When user enter a valid password "1234As"...................................passed
+When user reenter the password as "1234As"..................................passed
+When click on the register..................................................passed
+Then verify the success message.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="register page" name="admin activation" time="3.842761">
+        <system-out><![CDATA[Given user is on the application website....................................passed
+When user enters  valid username "wallstreetbets"...........................passed
+When user enters valid password "1234As$"...................................passed
+And user clicks on the sign in button.......................................passed
+When user clicks on administration dropdown.................................passed
+When user clicks on the user management button..............................passed
+When user activates the current customer....................................passed
+Then user signs out.........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="register page" name="admin activation 2" time="1.141872">
+        <system-out><![CDATA[Given user is on the application website....................................passed
+When user enters  valid username "t37employee"..............................passed
+When user enters valid password "12345As!"..................................passed
+Then user clicks on the sign in button......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="register page" name="managing the account" time="6.396495">
+        <system-out><![CDATA[When user clicks on my operation and choose manage account..................passed
+Then user click on create a new account button..............................passed
+When user provides description as  "saving account NEW".....................passed
+When user provides balance as "1000"........................................passed
+When user provides account type as "SAVING".................................passed
+When user choose account status as "ACTIVE".................................passed
+Then user user saves the changes............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="register page" name="managing the account 2" time="8.576315">
+        <system-out><![CDATA[When user clicks on my operation and choose manage account..................passed
+Then user click on create a new account button..............................passed
+When user provides description as  "checking account NEW"...................passed
+When user provides balance as "20000".......................................passed
+When user provides account type as "CHECKING"...............................passed
+When user choose account status as "ACTIVE".................................passed
+Then user user saves the changes............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="register page" name="managing customer" time="67.228397">
+        <system-out><![CDATA[When user clicks on my operation and choose mangage customers...............passed
+When user click on create a new account button..............................passed
+When user search the SSN as ""..............................................passed
+When user user clicks on the searchbox......................................passed
+When user types a firstname as  ""..........................................passed
+When user types a lastname ""...............................................passed
+And user provides the middle initial as ""..................................passed
+When user types a email as "" address.......................................passed
+When user provised cell number as ""........................................passed
+When user enters phone "" number............................................passed
+And user types the zipCode as ""............................................passed
+When user enter an address ""...............................................passed
+And user types the city as "Fairfax"........................................passed
+And user types the same ssn as ""...........................................passed
+When user selects a country as "USA"........................................passed
+And user types the state name as "Virginia".................................passed
+When user selects an account from dropdown as ""............................passed
+And user clicks on save button..............................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

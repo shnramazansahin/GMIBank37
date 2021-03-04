@@ -1,7 +1,7 @@
 package gmibank.utilities;
 
-
 import gmibank.pojos.Customer;
+import gmibank.pojos.States;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadTxt {
+
 
     public static List<Customer> returnCustomer(String filePath){
         List<Customer>all = new ArrayList<>();
@@ -80,36 +81,36 @@ public class ReadTxt {
         } finally {
             br.close();
         }
-        return list;
+            return list;
 
     }
 
-//    public static List<States> returnAllStates(String filePath){
-//        List<States>all = new ArrayList<>();
-//        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-//            StringBuilder sb = new StringBuilder();
-//            String line = br.readLine();
-//            System.out.println(line);
-//            int i = 0;
-//            while (line != null) {
-//                States state = new States();
-//                String [] allLine = line.split(",");
-//
-//                int id = Integer.parseInt(allLine[1].trim());
-//                state.setId(id);
-//                state.setName(allLine[0]);
-//                sb.append(System.lineSeparator());
-//                line = br.readLine();
-//
-//                System.out.println(i++);
-//
-//                all.add(state);
-//            }
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//        return all;
-//    }
+    public static List<States> returnAllStates(String filePath){
+        List<States>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+             States state = new States();
+             String [] allLine = line.split(",");
+
+                int id = Integer.parseInt(allLine[1].trim());
+                state.setId(id);
+                state.setName(allLine[0]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+
+                all.add(state);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
 
     public static List<String> returnCustomerSNNList(String filePath){
         List<String>all = new ArrayList<>();
@@ -135,29 +136,29 @@ public class ReadTxt {
     }
 
 
-//    public static List<States> returnAllStates2(String filePath){
-//        List<States>all = new ArrayList<>();
-//        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-//            StringBuilder sb = new StringBuilder();
-//            String line = br.readLine();
-//            System.out.println(line);
-//            int i = 0;
-//            while (line != null) {
-//                States states = new States();
-//                states.setName(line.split(",")[0].trim());
-//                states.setId(Integer.parseInt(line.split(",")[1].trim()));
-//                sb.append(System.lineSeparator());
-//                line = br.readLine();
-//
-//                System.out.println(i++);
-//
-//                all.add(states);
-//            }
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//        return all;
-//    }
+    public static List<States> returnAllStates2(String filePath){
+        List<States>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+               States states = new States();
+                states.setName(line.split(",")[0].trim());
+                states.setId(Integer.parseInt(line.split(",")[1].trim()));
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+
+                all.add(states);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
 
     public static List<String> returnAllStates3(String filePath){
         List<String>all = new ArrayList<>();
@@ -168,7 +169,7 @@ public class ReadTxt {
             int i = 0;
             while (line != null) {
                 String temp = "";
-                temp =line.split(",")[0].trim();
+               temp =line.split(",")[0].trim();
 
                 sb.append(System.lineSeparator());
                 line = br.readLine();
@@ -182,5 +183,6 @@ public class ReadTxt {
         }
         return all;
     }
+
 
 }

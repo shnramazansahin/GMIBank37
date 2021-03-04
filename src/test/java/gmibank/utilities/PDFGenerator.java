@@ -1,6 +1,5 @@
 package gmibank.utilities;
 
-
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
@@ -8,15 +7,67 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import gmibank.pojos.pojos.Customer;
-
+import gmibank.pojos.Country;
+import gmibank.pojos.Customer;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class PDFGenerator {
+
+
+
+    public static void pdfGenerator(String header, String fileName){
+
+        Document document = new Document();
+        String pdf_path = fileName;
+        String pdf_title = header;
+        List<String> headers = new ArrayList<String>();
+        headers.add("Applicant");
+        headers.add("SSN");
+        headers.add("Country");
+        headers.add("State");
+        headers.add("Zip code");
+
+        try{
+
+            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(pdf_path));
+
+            document.open();
+
+            document.add(new Paragraph(pdf_title));
+
+            PdfPTable table = new PdfPTable(5);
+
+            table.setWidthPercentage(110);
+            table.setSpacingBefore(12);
+            table.setSpacingAfter(12);
+            float [] colWidth = {2,2,2,2,2};
+            table.setWidths(colWidth);
+
+            for (int i=0; i<headers.size();i++){
+                PdfPCell cellHeader = new PdfPCell(new Paragraph("    "+headers.get(i)));
+                table.addCell(cellHeader);
+
+            }
+
+
+
+            document.add(table);
+
+            document.close();
+
+            writer.close();
+
+        }
+
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
 
 
     public static void pdfGeneratorRowsAndCells(String header, String fileName){
@@ -175,6 +226,40 @@ public class PDFGenerator {
         }
 
 
+    }
+
+    public static void main(String[] args) {
+
+        List <Customer> list = new ArrayList<>();
+        Country country = new Country();
+        country.setName("USA");
+        Customer customer = new Customer();
+        customer.setFirstName("Emine");
+        customer.setState("MA");
+        customer.setSsn("202020202");
+        customer.setZipCode("02120");
+        customer.setCountry(country);
+
+        list.add(customer);
+
+
+
+
+
+
+
+
+
+        String header = "All Applicants Information";
+        String fileName ="applicants.pdf";
+
+
+
+
+
+
+
+        pdfGeneratorRowsAndCellsWithList(header,list,fileName);
     }
 
 }

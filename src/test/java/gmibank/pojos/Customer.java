@@ -1,5 +1,8 @@
-package gmibank.pojos.pojos;
+package gmibank.pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Customer {
 
     private int id;
@@ -12,7 +15,7 @@ public class Customer {
     private String zipCode;
     private String address;
     private String city;
-    private String ssn;
+    private String ssn1;
     private String createDate;
     private boolean zelleEnrolled;
     private Country country;
@@ -100,11 +103,11 @@ public class Customer {
     }
 
     public String getSsn() {
-        return ssn;
+        return ssn1;
     }
 
     public void setSsn(String ssn) {
-        this.ssn = ssn;
+        this.ssn1 = ssn;
     }
 
     public String getCreateDate() {
@@ -147,6 +150,17 @@ public class Customer {
         this.user = user;
     }
 
+    public Accounts getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(Accounts accounts) {
+        this.accounts = accounts;
+    }
+
+    private Accounts accounts;
 
 
 }
+
+

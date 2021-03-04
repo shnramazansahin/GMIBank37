@@ -1,14 +1,17 @@
 package gmibank.utilities;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateUtil {
 
+
     // MMMM dd, yyy  --> February 17, 2019
     public static String todaysDate(){
-        String today = new SimpleDateFormat("MMMM dd, yyy").format(new Date());
-        return today;
+    String today = new SimpleDateFormat("MMMM dd, yyy").format(new Date());
+    return today;
     }
 
     // MM-dd-yy     --> 02-17-19
@@ -28,4 +31,15 @@ public class DateUtil {
         String today = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
         return today;
     }
+    public static String previousDays(int day) {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy 'T' HH:mm:ss 'Z'");
+        return dateTimeFormatter.format(now.minusDays(day));
+    }
 }
+
+
+
+
+
+

@@ -1,5 +1,4 @@
 package gmibank.utilities;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,16 +13,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class Driver {//What?=>It is just to create, initialize the driver instance.(Singleton driver)
+public class Driver {
+    private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+
+    //What?=>It is just to create, initialize the driver instance.(Singleton driver)
     //Why?=>We don't want to create and initialize the driver when we don't need
     //We will create and initialize the driver when it is null
     //We can use Driver class with different browser(chrome,firefox,headless)
-    private Driver(){
+    private Driver() {
         //we don't want to create another abject. Singleton pattern
     }
 
     //create a driver instance
     static WebDriver driver;
+
     //to initialize the driver we create a static method
     public static WebDriver getDriver() {
         //create the driver if and only if it is null
@@ -51,10 +54,10 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         return driver;
     }
 
-    public static void closeDriver(){
-        if (driver!=null){//if the driver is pointing chrome
+    public static void closeDriver() {
+        if (driver != null) {//if the driver is pointing chrome
             driver.quit();//quit the driver
-            driver=null;//set it back to null to make sure driver is null
+            driver = null;//set it back to null to make sure driver is null
             // so I can initialize it again
             //This is important especially you do cross browser testing(testing with
             // multiple browser like chrome, firefox, ie etc.)
@@ -72,7 +75,7 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         }
     }
 
-    public static void waitAndSendText(WebElement element,String text, int timeout) {
+    public static void waitAndSendText(WebElement element, String text, int timeout) {
         for (int i = 0; i < timeout; i++) {
             try {
                 element.sendKeys(text);
@@ -84,7 +87,7 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
     }
 
     public static String waitAndGetText(WebElement element, int timeout) {
-        String text="";
+        String text = "";
         for (int i = 0; i < timeout; i++) {
             try {
                 text = element.getText();
@@ -108,22 +111,27 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+
     public static WebElement waitForVisibility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
     public static Boolean waitForInVisibility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
+
     public static WebElement waitForClickablility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
+
     public static void waitForPageToLoad(long timeOutInSeconds) {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -143,17 +151,26 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         jse.executeScript(command, element);
     }
 
-    public static void selectAnItemFromDropdown(WebElement item, String selectableItem){
+    public static WebDriver selectAnItemFromDropdown(WebElement item, String selectableItem) {
         wait(5);
         Select select = new Select(item);
-        for (int i =0;i<select.getOptions().size();i++){
-            if(select.getOptions().get(i).getText().equalsIgnoreCase(selectableItem)){
+        for (int i = 0; i < select.getOptions().size(); i++) {
+            if (select.getOptions().get(i).getText().equalsIgnoreCase(selectableItem)) {
                 select.getOptions().get(i).click();
                 break;
             }
         }
-
+        return driverPool.get();
     }
-    //comments to be added
-    //Here some changes made on local branch
+
+    public static void close() {
+        driverPool.get().quit();
+        driverPool.remove();
+    }
+
+
+    public static void get(String url) {
+    }
+
 }
+

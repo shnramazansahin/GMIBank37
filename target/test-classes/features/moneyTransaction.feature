@@ -16,10 +16,14 @@ Feature: Money Transaction feature
     And User enters amount of balance "<Balance>"
     And User provides a description for transfer "<Description>"
     And User clicks on make transfer button
-    Then System should display succes message as ""
+    And System should display success message as "Transfer is succesfull"
+    And User clicks on my operations
+    And User navigates to my accounts button
+    Then User should be able to see accounts information after transaction
+
     Examples:
-      | From | To | Balance | Description |
-      | checking account for t37customer | investment account for t37customer | 3000 | 3000$ transfered between checking and investment accounts |
+      | Balance | Description                                          |
+      | 30      | 30$ transferred between checking and saving accounts |
 
 
 

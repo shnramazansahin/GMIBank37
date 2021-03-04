@@ -26,7 +26,7 @@ public class AccountCreationPage extends BasePage {
     @FindBy(id="tp-account-accountStatusType")
     public WebElement accountStatus;
 
-    @FindBy(xpath="//input[@id='tp-account-createDate']/following::input")
+    @FindBy(xpath="//input[@id='tp-account-createDate']")
     public WebElement  createDate;
 
     @FindBy(xpath="//input[@id='tp-account-closedDate']/following::input")

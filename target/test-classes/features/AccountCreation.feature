@@ -18,5 +18,5 @@ Feature: Account Creation feature
     Then User saves the account
     Examples:
       | description               | balance | type     | status |
-      | Checking account for user | 10000   | CHECKING | ACTIVE |
+      | Checking account for user | 70000   | CHECKING | ACTIVE |
 

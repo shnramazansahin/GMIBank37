@@ -1,6 +1,7 @@
 package gmibank.utilities;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -121,6 +122,12 @@ public class UsefulMethods {
             }
         }
         return textValues;
+    }
+    public static void selectByIndex(WebElement element, int index) {
+        Select objSelect = new Select(element);
+        List<WebElement> elementCount = objSelect.getOptions();
+        objSelect.selectByIndex(index);
+        System.out.println("number of elements: "+elementCount.size());
     }
 
 }

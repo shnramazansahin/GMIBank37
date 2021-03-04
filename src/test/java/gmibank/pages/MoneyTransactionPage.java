@@ -25,4 +25,16 @@ public class MoneyTransactionPage extends BasePage {
 
     @FindBy(id="make-transfer")
     public WebElement makeTransferButton;
+
+    @FindBy(xpath = "//div[contains(text(),'Transfer is succesfull')]")
+    public WebElement successTransferMessage;
+
+    @FindBy(xpath = "//a[contains(text(),'My Accounts')]")
+    public WebElement myAccounts;
+
+    @FindBy(xpath = "//tbody/tr[1]/td[4]/button[1]")
+    public WebElement firstAccountInfoButton;
+
+    @FindBy(xpath = "//tbody/tr[2]/td[4]/button[1]")
+    public WebElement secondAccountInfoButton;
 }

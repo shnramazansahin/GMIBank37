@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gmibank.pages.CustomerPage;
 import gmibank.pages.LoginPage;
+import gmibank.pojos.User;
 import gmibank.utilities.*;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -20,6 +21,7 @@ public class CustomerPageStepDef {
 
     CustomerPage customerPage = new CustomerPage();
     LoginPage loginPage = new LoginPage();
+    List<User> users = ReadTxt.returnAWholeUser(ConfigurationReader.getProperty("fileNameOfCustomer"));
     Faker faker = new Faker();
 
     @Given("User navigates to my operations dropdown")
@@ -44,22 +46,21 @@ public class CustomerPageStepDef {
     @Given("User enters  {int} digit SSN in ssn search box {string}")
     public void user_enters_digit_SSN_in_ssn_search_box(Integer int1, String ssn) {
 
+        ssn=users.get(users.size()-1).getSsn();
         Driver.waitAndSendText(customerPage.searchSsnField, ssn, 3);
-        //customerPage.searchSsnField.sendKeys(string);
-
 
     }
 
     @When("User clicks on search button")
-    public void userClicksOnSearchButton() throws InterruptedException {
-        Thread.sleep(3000);
+    public void userClicksOnSearchButton()  {
+        Driver.sleep(3000);
         Driver.waitAndClick(customerPage.searchButton, 5);
 
     }
 
     @Then("User should see all registration information")
-    public void userShouldSeeAllRegistrationInformation() throws InterruptedException {
-        Thread.sleep(3000);
+    public void userShouldSeeAllRegistrationInformation()  {
+        Driver.sleep(3000);
         String ssn = customerPage.ssnField.getAttribute("value");
         String firstName = customerPage.firstNameField.getAttribute("value");
         String lastName = customerPage.lastNameField.getAttribute("value");
@@ -76,46 +77,48 @@ public class CustomerPageStepDef {
 
     @When("User enters a first name as {string}")
     public void user_enters_a_first_name_as(String firstname) {
-
-        customerPage.firstNameField.clear();
-        Driver.waitAndSendText(customerPage.firstNameField, firstname, 3);
+//        firstname=users.get(users.size()-1).getFirstName();
+//        customerPage.firstNameField.clear();
+//        Driver.waitAndSendText(customerPage.firstNameField, firstname, 3);
     }
 
     @When("User enters a lastname {string}")
     public void user_enters_a_lastname(String lastname) {
 
-        customerPage.lastNameField.clear();
-        Driver.waitAndSendText(customerPage.lastNameField, lastname, 3);
+//        lastname=users.get(users.size()-1).getLastName();
+//        customerPage.lastNameField.clear();
+//        Driver.waitAndSendText(customerPage.lastNameField, lastname, 3);
 
     }
 
     @When("User enters a middel initials as {string}")
-    public void user_enters_a_middel_initials_as(String midInitials) {
+    public void user_enters_a_middel_initials_as(String midInitial) {
 
-        customerPage.middleInitialField.clear();
-        Driver.waitAndSendText(customerPage.middleInitialField, midInitials, 3);
+        midInitial=faker.name().nameWithMiddle().substring(0,1);
+        Driver.waitAndSendText(customerPage.middleInitialField, midInitial, 3);
 
     }
 
     @When("User enters an email  address as{string}")
     public void user_enters_an_email_address_as(String email) {
 
-        customerPage.emailField.clear();
-        Driver.waitAndSendText(customerPage.addressField, email, 3);
+//        customerPage.emailField.clear();
+//        Driver.waitAndSendText(customerPage.addressField, email, 3);
 
     }
 
     @When("User enters {int} digits mobile phone number as {string}")
     public void user_enters_digits_mobile_phone_number_as(Integer int1, String mobilePN) {
 
-        customerPage.mobilePhoneNumberField.clear();
-        Driver.waitAndSendText(customerPage.mobilePhoneNumberField, mobilePN, 3);
+//        customerPage.mobilePhoneNumberField.clear();
+//        Driver.waitAndSendText(customerPage.mobilePhoneNumberField, mobilePN, 3);
 
     }
 
     @When("User enters {int} digits phone number as {string}")
     public void user_enters_digits_phone_number_as(Integer int1, String phone) {
-
+         phone="123-456-7890";
+        //phone=faker.phoneNumber().phoneNumber();
         customerPage.phoneNumberField.clear();
         Driver.waitAndSendText(customerPage.phoneNumberField, phone, 3);
 
@@ -124,7 +127,7 @@ public class CustomerPageStepDef {
     @When("User enters a zip code as {string}")
     public void user_enters_a_zip_code_as(String zipCode) {
 
-        customerPage.zipCodeField.clear();
+        zipCode=faker.address().zipCode();
         Driver.waitAndSendText(customerPage.zipCodeField, zipCode, 3);
 
     }
@@ -132,15 +135,15 @@ public class CustomerPageStepDef {
     @When("User enters an address as {string}")
     public void user_enters_an_address_as(String address) {
 
-        customerPage.addressField.clear();
-        Driver.waitAndSendText(customerPage.addressField, address, 3);
+//        customerPage.addressField.clear();
+//        Driver.waitAndSendText(customerPage.addressField, address, 3);
 
     }
 
     @When("User enters a city name as {string}")
     public void user_enters_a_city_name_as(String city) {
 
-        customerPage.cityField.clear();
+        city=faker.address().city();
         Driver.waitAndSendText(customerPage.cityField, city, 3);
 
 
@@ -148,9 +151,8 @@ public class CustomerPageStepDef {
 
     @When("User enters a {int} digits SSN as {string}")
     public void user_enters_a_digits_SSN_as(Integer int1, String ssn) {
-
-        customerPage.ssnField.clear();
-        Driver.waitAndSendText(customerPage.ssnField, ssn, 3);
+        ssn=users.get(users.size()-1).getSsn();
+        //Driver.waitAndSendText(customerPage.ssnField, ssn, 3);
 
     }
 
@@ -173,7 +175,7 @@ public class CustomerPageStepDef {
 
     @When("User can select a country as {string}")
     public void user_can_select_a_country_as(String country) {
-
+        country="USA";
         BrowserUtils.scrollToElement(customerPage.countryDropdown);
         Driver.selectByVisibleText(customerPage.countryDropdown,country);
 
@@ -185,7 +187,7 @@ public class CustomerPageStepDef {
     @When("User enters as a state as {string} in US")
 
     public void user_enters_as_a_state_as_in_US(String state) {
-
+          state="Texas";
 //        boolean abv = UsefulMethods.stateAbbreviationDictionary.containsKey(state);
 //        boolean stateName = UsefulMethods.stateAbbreviationDictionary.containsValue(state);
 //        if (abv || stateName) {
@@ -209,7 +211,7 @@ public class CustomerPageStepDef {
 
         //Driver.selectAnItemFromDropdown(customerPage.accountsDropdown, accountType);
         List<String >accounts = ReadTxt.returnAllAccounts(ConfigurationReader.getProperty("AllAccountInfoFile"));
-
+        Driver.sleep(3000);
         Driver.waitAndClickLocationText(customerPage.accountsDropdown,accounts.get(accounts.size()-1));
         Driver.waitAndClickLocationText(customerPage.accountsDropdown,accounts.get(accounts.size()-2));
 

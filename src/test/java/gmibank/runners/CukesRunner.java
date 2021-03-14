@@ -13,8 +13,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "gmibank/step_definitions",
-        tags = "@E2E",
-        dryRun = false
+        tags = "@pdf",
+        strict = true
+       // dryRun = false
 
 
 

@@ -2,10 +2,12 @@ package gmibank.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Customer {
 
-    private int id;
+    private String id;
     private String firstName;
     private String lastName;
     private String middleInitial;
@@ -22,11 +24,11 @@ public class Customer {
     private String state;
     private User user;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -156,11 +158,58 @@ public class Customer {
 
     public void setAccounts(Accounts accounts) {
         this.accounts = accounts;
+
     }
 
     private Accounts accounts;
 
+    public Customer(String id, String firstName, String lastName, String middleInitial, String email, String mobilePhoneNumber, String phoneNumber, String zipCode, String address, String city, String ssn, String createDate, boolean zelleEnrolled, Country country, String state, User user, Accounts accounts) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleInitial = middleInitial;
+        this.email = email;
+        this.mobilePhoneNumber = mobilePhoneNumber;
+        this.phoneNumber = phoneNumber;
+        this.zipCode = zipCode;
+        this.address = address;
+        this.city = city;
+        this.ssn = ssn;
+        this.createDate = createDate;
+        this.zelleEnrolled = zelleEnrolled;
+        this.country = country;
+        this.state = state;
+        this.user = user;
+        this.accounts = accounts;
 
+    }
+
+    public Customer() {
+    }
+
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleInitial='" + middleInitial + '\'' +
+                ", email='" + email + '\'' +
+                ", mobilePhoneNumber='" + mobilePhoneNumber + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", ssn='" + ssn + '\'' +
+                ", createDate='" + createDate + '\'' +
+                ", zelleEnrolled=" + zelleEnrolled +
+                ", country=" + country +
+                ", state='" + state + '\'' +
+                ", user=" + user +
+                ", accounts=" + accounts +
+                '}';
+    }
 }
 
 

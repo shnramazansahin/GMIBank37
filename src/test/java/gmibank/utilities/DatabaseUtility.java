@@ -11,16 +11,20 @@ public class DatabaseUtility {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+
+
     public static void createConnection() {
-            String url = ConfigurationReader.getProperty("database_url");
-        String user = ConfigurationReader.getProperty("database_user");
-        String password = "Techpro_@126";
+
+        String db_url = ConfigurationReader.getProperty("db_url");
+        String db_user = ConfigurationReader.getProperty("db_user");
+        String db_password = ConfigurationReader.getProperty("db_password");
         try {
-            connection = DriverManager.getConnection(url, user, password);
+            connection = DriverManager.getConnection(db_url, db_user, db_password);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
     }
 
     public static void createConnection(String url, String user, String password) {
@@ -58,6 +62,11 @@ public class DatabaseUtility {
 
         return getQueryResultList(query).get(0).get(0);
     }
+
+    public static Object getCellValue(String query , int column , int row) {
+        return getQueryResultList(query).get(row).get(column);
+    }
+
     /**
      *
      * @param query

@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="24.077345">
-    <testcase classname="Money Transaction feature" name="Money transfer should be available" time="24.077345">
-        <system-out><![CDATA[Given User goes to login page...............................................passed
-Then User logs in as a customer.............................................passed
-When User clicks on my operations...........................................passed
-And User navigates to money transfer button.................................passed
-And User selects an account from account dropdown "<From>"..................passed
-And User selects an account to account dropdown "<To>"......................passed
-And User enters amount of balance "30"......................................passed
-And User provides a description for transfer "30$ transferred between checking and saving accounts".passed
-And User clicks on make transfer button.....................................passed
-And System should display success message as "Transfer is succesfull".......passed
-And User clicks on my operations............................................passed
-And User navigates to my accounts button....................................passed
-Then User should be able to see accounts information after transaction......passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.757028">
+    <testcase classname="Pdf Creation" name="Create Pdf using some customer data" time="3.757028">
+        <system-out><![CDATA[Given User creates a connection with DB.....................................passed
+And User retrieves users information for using the query as "SELECT tc.first_name,tc.last_name,role.authority_name FROM tp_customer tc LEFT JOIN jhi_user_authority role ON tc.user_id = role.user_id".passed
 ]]></system-out>
     </testcase>
 </testsuite>

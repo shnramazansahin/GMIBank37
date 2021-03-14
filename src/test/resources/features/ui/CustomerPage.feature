@@ -10,6 +10,7 @@ Feature: Customer creation feature
     And User clicks on the manage customers
     And User clicks on create a new customer button
 
+  @CreateCustomer
   Scenario Outline:User able to create new customer
 
     Given User enters  9 digit SSN in ssn search box "<SSN>"

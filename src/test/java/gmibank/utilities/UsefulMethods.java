@@ -1,8 +1,16 @@
 package gmibank.utilities;
 
+import com.sun.xml.xsom.impl.scd.Iterators;
+import gmibank.pojos.Country;
+import gmibank.pojos.NewApplicant;
+import gmibank.pojos.User;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.LineNumberReader;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -123,11 +131,87 @@ public class UsefulMethods {
         }
         return textValues;
     }
+
     public static void selectByIndex(WebElement element, int index) {
         Select objSelect = new Select(element);
         List<WebElement> elementCount = objSelect.getOptions();
         objSelect.selectByIndex(index);
-        System.out.println("number of elements: "+elementCount.size());
+        //  System.out.println("number of elements: " + elementCount.size());
     }
 
+    public static boolean compareTwoObjectList(List<Object> list1, List<Object> list2) {
+        boolean flag = false;
+        int counter = 0;
+        for (int i = 0; i < list1.size(); i++) {
+            for (int j = 0; j < list2.size(); j++) {
+
+                if (list1.get(i).toString().equals(list2.get(j).toString())) {
+                    counter++;
+//                     System.out.println("Expected list element = "+list1.get(i).toString());
+//                     System.out.println("Actual list element = "+list2.get(j).toString());
+//                    System.out.println("counter = " + counter);
+                    break;
+                }
+            }
+
+        }
+        System.out.println("counter ifden once = " + counter);
+        if (counter == list1.size()) {
+            flag = true;
+
+        }
+        return flag;
+
+    }
+    public static boolean compareTwoObjectListForNewApplicants(List<Object> list1, List<NewApplicant> list2) {
+        boolean flag = false;
+        int counter = 0;
+        for (int i = 0; i < list1.size(); i++) {
+            String ssn= (String) list1.get(i);
+            for (int j = 0; j < list2.size(); j++) {
+                if (ssn==list2.get(j).getSSN()) {
+                     System.out.println("Expected list element = "+ssn);
+                     System.out.println("Actual list element = "+list2.get(j).toString());
+                counter++;
+                break;
+                }
+            }
+        }
+        if (counter == list1.size()) {
+            flag = true;
+
+        }
+        return flag;
+
+    }
+
+    public static int[] randomNumbers(int upperLimit) {
+
+        int[] randomize = new int[5];
+        Random objGenerator = new Random();
+        for (int iCount = 0; iCount < 5; iCount++) {
+            int randomNumber = objGenerator.nextInt(upperLimit);
+            randomize[iCount] = randomNumber;
+        }
+        return randomize;
+    }
+
+    public static int getNumberOfLinesInAFile(String filePath) {
+        int result = 0;
+        try {
+            FileReader input = new FileReader(filePath);
+
+            LineNumberReader count = new LineNumberReader(input);
+
+            while (count.skip(Integer.MAX_VALUE) > 0) {
+                // Loop just in case the file is > Long.MAX_VALUE or skip() decides to not read the entire file
+            }
+
+            result = count.getLineNumber() + 1;  // +1 because line index starts at 0
+
+        } catch (Exception e) {
+
+        }
+        return result;
+    }
 }

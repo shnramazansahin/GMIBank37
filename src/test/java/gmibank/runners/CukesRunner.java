@@ -13,9 +13,15 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "gmibank/step_definitions",
-        tags = "@pdf",
-        strict = true
-       // dryRun = false
+       // tags="@Registration",
+       // tags = "@NewApplicantApi",
+        //tags="@CreateCustomerApi",
+       // tags="@UpdateCustomerApi",
+        //tags = "@UserDB",
+        tags="@pdf",
+
+       strict = true
+        //dryRun = false
 
 
 

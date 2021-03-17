@@ -244,7 +244,7 @@ public class PDFGenerator {
         try{
 
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(pdf_path));
-            System.out.println("in try catch");
+          //  System.out.println("in try catch");
             document.open();
 
             document.add(new Paragraph("                                                               "+pdf_title));
@@ -293,7 +293,7 @@ public class PDFGenerator {
             e.printStackTrace();
         }
 
-
+        System.out.println("Pdf generated successfully");
     }
 
   //  public static void main(String[] args) {

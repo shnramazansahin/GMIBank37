@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.757028">
-    <testcase classname="Pdf Creation" name="Create Pdf using some customer data" time="3.757028">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="6.651312">
+    <testcase classname="Pdf Creation" name="Create Pdf using some customer data" time="6.651312">
         <system-out><![CDATA[Given User creates a connection with DB.....................................passed
 And User retrieves users information for using the query as "SELECT tc.first_name,tc.last_name,role.authority_name FROM tp_customer tc LEFT JOIN jhi_user_authority role ON tc.user_id = role.user_id".passed
 ]]></system-out>

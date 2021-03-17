@@ -159,8 +159,8 @@ public class ReadTxt {
         return all;
     }
 
-    public static List<String> returnRegistrantsSSNList(String filePath) {
-        List<String> all = new ArrayList<>();
+    public static List<Object> returnRegistrantsSSNList(String filePath) {
+        List<Object> all = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
@@ -175,6 +175,72 @@ public class ReadTxt {
                 // System.out.println(i++);
 
                 all.add(customer.getSsn());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return all;
+    }
+    public static List<Object> returnUsersEmails(String filePath) {
+        List<Object> all = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            // System.out.println(line);
+            int i = 0;
+            while (line != null) {
+               User user = new User();
+                user.setEmail(line.split(",")[6]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                // System.out.println(i++);
+
+                all.add(user.getEmail());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return all;
+    }
+    public static List<Object> returnUsersFirstName(String filePath) {
+        List<Object> all = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            // System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                User user = new User();
+                user.setFirstName(line.split(",")[2]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                // System.out.println(i++);
+
+                all.add(user.getFirstName());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return all;
+    }
+    public static List<Object> returnUsersLastName(String filePath) {
+        List<Object> all = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            // System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                User user = new User();
+                user.setLastName(line.split(",")[3]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                // System.out.println(i++);
+
+                all.add(user.getLastName());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -232,8 +298,8 @@ public class ReadTxt {
     }
 
 
-    public static List<String> returnAllCustomersSSNs(String filePath) {
-        List<String> allSSNIds = new ArrayList<>();
+    public static List<Object> returnAllCustomersSSNs(String filePath) {
+        List<Object> allSSNIds = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
@@ -493,12 +559,36 @@ public class ReadTxt {
                 customer.setSsn(line.split(",")[4].trim());
                 customer.setAddress(line.split(",")[5].trim());
                 customer.setEmail(line.split(",")[6].trim());
-                customer.setPhoneNumber(line.split(",")[6].trim());
+                customer.setPhoneNumber(line.split(",")[7].trim());
                 sb.append(System.lineSeparator());
                 line = br.readLine();
 
 
                 all.add(customer);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return all;
+    }
+    public static List<Object> returnUsersInfoForDB(String filePath) {
+        List<Object> all = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+
+            int i = 0;
+            while (line != null) {
+                User user = new User();
+
+                user.setFirstName(line.split(",")[2].trim());
+                user.setLastName(line.split(",")[3].trim());
+                user.setEmail(line.split(",")[6].trim());
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+
+                all.add(user);
             }
         } catch (Exception e) {
             e.printStackTrace();

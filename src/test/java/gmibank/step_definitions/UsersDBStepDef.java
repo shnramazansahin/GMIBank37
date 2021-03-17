@@ -3,10 +3,7 @@ package gmibank.step_definitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gmibank.utilities.DatabaseUtility;
-import gmibank.utilities.ReadTxt;
-import gmibank.utilities.UsefulMethods;
-import gmibank.utilities.WriteToTxt;
+import gmibank.utilities.*;
 import org.junit.Assert;
 
 import java.util.ArrayList;
@@ -15,6 +12,11 @@ import java.util.List;
 public class UsersDBStepDef {
 
     List<Object> rowList;
+    String filePath = ConfigurationReader.getProperty("fileNameOfCustomer");
+    List<Object> usersSSns;
+    List<Object> usersEmails;
+    List<Object> usersFirstName;
+    List<Object> usersLastName;
 
     @Given("User creates a connection with DB")
     public void user_creates_a_connection_with_DB() {
@@ -39,12 +41,15 @@ public class UsersDBStepDef {
     @Then("User validates all users information")
     public void user_validates_all_users_information() {
 
-       List<Object> expectedData= ReadTxt.returnFiveItemsComingFromDB("AllUsersInfo.txt");
-
-       System.out.println("expectedData = " + expectedData);
-
-        Assert.assertTrue("Validation is not successful!",UsefulMethods.compareTwoObjectList(expectedData,rowList));
-
+     usersEmails=ReadTxt.returnUsersEmails(filePath);
+//     usersFirstName=ReadTxt.returnUsersFirstName(filePath);
+//     usersLastName=ReadTxt.returnUsersLastName(filePath);
+//
+//        //System.out.println("rowList = " + rowList);
+//        Assert.assertTrue("Validation is not successful!",UsefulMethods.compareTwoObjectList(usersFirstName,rowList));
+//        Assert.assertTrue("Validation is not successful!",UsefulMethods.compareTwoObjectList(usersLastName,rowList));
+      Assert.assertTrue("Validation is NOT successful!",UsefulMethods.compareTwoObjectList(usersEmails,rowList));
+//     // Assert.assertEquals("MaxLittel@gmail.com","MaxLittel@gmail.com");
         System.out.println("It's workinggggg!!!" );
 
     }

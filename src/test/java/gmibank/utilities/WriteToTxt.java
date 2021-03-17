@@ -258,7 +258,7 @@ public class WriteToTxt {
 
     public static void saveAllCustomersComingFromDB(String fileName, List<Object> allCustomer) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
             for (int i = 0; i < allCustomer.size(); i++) {
                 writer.append(allCustomer.get(i) + "\n");
@@ -273,10 +273,10 @@ public class WriteToTxt {
 
     public static void saveDifferentInfoFromDB(String fileName, List<Object> data) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
             for (int i = 0; i < data.size(); i++) {
-                writer.append(data.get(i) + "\n");
+                writer.append(data.get(i) + ",\n");
 
             }
             writer.close();

@@ -36,6 +36,7 @@ public class MoneyTransactionStepDef extends BasePage {
 
     @When("User selects an account from account dropdown {string}")
     public void user_selects_an_account_from_account_dropdown(String from) {
+
        Driver.selectByIndex(moneyTransactionPage.fromAccountId,1);
       // Driver.selectAnItemFromDropdown(moneyTransactionPage.fromAccountId,from);
     }

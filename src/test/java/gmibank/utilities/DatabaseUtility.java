@@ -204,8 +204,6 @@ public class DatabaseUtility {
     public static void insertCountry(String  countryName){
 
 
-
-
     }
 
     public static void executeInsertion(String query) {

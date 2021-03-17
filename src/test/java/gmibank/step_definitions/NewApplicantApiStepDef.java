@@ -20,14 +20,15 @@ import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
-public class NewApplicantStepDef {
+public class NewApplicantApiStepDef {
 
     Response response;
     String filePath = ConfigurationReader.getProperty("fileNameOfCustomer");
     String bearerToken = ConfigurationReader.getProperty("api_bearer_token");
     NewApplicant [] newApplicants;
     List<NewApplicant> expectedApplicantsInfos;
-    List<String> registeredSSNs;
+    List<Object> registeredSSNs;
+
 
 
     @Given("All api new applicant data is set to response using  api end point {string}")
@@ -47,7 +48,7 @@ public class NewApplicantStepDef {
                 .extract()
                 .response();
 
-     //   response.prettyPrint();
+        response.prettyPrint();
 
     }
 
@@ -62,6 +63,7 @@ public class NewApplicantStepDef {
 
     @When("User reads new applicants data from correspondent file")
     public void user_reads_new_applicants_data_from_correspondent_file() {
+
        registeredSSNs=ReadTxt.returnRegistrantsSSNList(filePath);
         System.out.println("registeredSSNs = " + registeredSSNs);
     //   expectedApplicantsInfos= ReadTxt.returnAWholeApplicant(filePath);

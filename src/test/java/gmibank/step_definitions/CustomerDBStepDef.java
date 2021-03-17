@@ -16,6 +16,7 @@ import static gmibank.utilities.DatabaseUtility.getQueryResultList;
 public class CustomerDBStepDef {
 
     List<Object> rowList;
+    String filePath = ConfigurationReader.getProperty("fileNameOfCustomer");
 
     @Given("User retrieves all customers information for using the query as {string} with column as{string}")
     public void user_retrieves_all_customers_information_for_using_the_query_as_with_column_as(String query, String columnData) {
@@ -26,14 +27,14 @@ public class CustomerDBStepDef {
     @When("User sets all customers info to correspondent files")
     public void user_sets_all_customers_info_to_correspondent_files() {
 
-        WriteToTxt.saveAllCustomersComingFromDB("AllCustomerInfo.txt",rowList);
+        WriteToTxt.saveAllCustomersComingFromDB("AllCustomerInfos.txt",rowList);
 
     }
 
     @Then("User validates all customers information")
     public void user_validates_all_customers_information() {
 
-        List<Object> expectedData= ReadTxt.returnRandomFiveItemsComingFromDB("AllCustomerInfo.txt");
+        List<Object> expectedData= ReadTxt.returnAllCustomersSSNs(filePath);
         System.out.println("expectedData = " + expectedData);
 //        System.out.println("================================================================================");
 //        System.out.println("rowList = " + rowList);
